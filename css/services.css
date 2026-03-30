@@ -1,0 +1,451 @@
+/* =====================================================
+   SERVICES.CSS — Páginas de detalle de servicios
+   NexGen Cloudware
+   ===================================================== */
+
+/* ---- Hero ---- */
+.svc-hero {
+    position: relative;
+    background: linear-gradient(135deg, #0D0B2B 0%, #150359 45%, #22038C 100%);
+    padding: 140px 0 100px;
+    overflow: hidden;
+}
+.svc-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.svc-hero-bg::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,188,212,0.12) 0%, transparent 65%);
+}
+.svc-hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(123,47,190,0.1) 0%, transparent 65%);
+}
+.svc-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+/* Breadcrumb */
+.svc-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+}
+.svc-breadcrumb a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.svc-breadcrumb a:hover { color: #00BCD4; }
+.svc-breadcrumb span { color: rgba(255,255,255,0.3); }
+.svc-breadcrumb .svc-breadcrumb-current { color: rgba(255,255,255,0.75); }
+
+/* Category badge */
+.svc-category-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+.badge-infraestructura {
+    background: rgba(0,188,212,0.15);
+    border: 1px solid rgba(0,188,212,0.35);
+    color: #00BCD4;
+}
+.badge-estrategia {
+    background: rgba(123,47,190,0.15);
+    border: 1px solid rgba(123,47,190,0.35);
+    color: #a96ef5;
+}
+.badge-desarrollo {
+    background: rgba(232,101,10,0.15);
+    border: 1px solid rgba(232,101,10,0.35);
+    color: #f0843a;
+}
+.badge-datos {
+    background: rgba(16,185,129,0.15);
+    border: 1px solid rgba(16,185,129,0.35);
+    color: #34d399;
+}
+
+.svc-hero h1 {
+    color: #fff;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+.svc-hero-highlight {
+    background: linear-gradient(90deg, #00BCD4, #7B2FBE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.svc-hero-tagline {
+    color: rgba(255,255,255,0.65);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 580px;
+}
+.svc-hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.btn-svc-primary {
+    display: inline-block;
+    background: #00BCD4;
+    color: #fff;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,188,212,0.35);
+    white-space: nowrap;
+}
+.btn-svc-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(0,188,212,0.5);
+    background: #fff;
+    color: #22038C;
+}
+.btn-svc-outline {
+    display: inline-block;
+    background: transparent;
+    color: #22038C;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid rgba(34,3,140,0.35);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.btn-svc-outline:hover {
+    border-color: #00BCD4;
+    color: #00BCD4;
+    transform: translateY(-3px);
+}
+
+/* ---- Sección: Descripción + Qué incluye ---- */
+.svc-overview {
+    background: #fff;
+    padding: 90px 0;
+}
+.svc-overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+.svc-overview-text h2 {
+    color: #0D0B2B;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+.svc-overview-text p {
+    color: #555;
+    font-size: 0.97rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.svc-overview-text p:last-child { margin-bottom: 0; }
+.svc-overview-text strong { color: #22038C; }
+
+/* Lista de características */
+.svc-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.svc-feature-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(34,3,140,0.08);
+    background: #f8f7ff;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+.svc-feature-item:hover {
+    border-color: rgba(34,3,140,0.18);
+    box-shadow: 0 4px 20px rgba(34,3,140,0.07);
+}
+.svc-feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #22038C, #00BCD4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.svc-feature-item h4 {
+    color: #0D0B2B;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.svc-feature-item p {
+    color: #666;
+    font-size: 0.87rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---- Sección: Beneficios ---- */
+.svc-benefits {
+    background: #f8f7ff;
+    padding: 90px 0;
+}
+.svc-benefits-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+.svc-benefits-header h2 {
+    color: #0D0B2B;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.svc-benefits-header p {
+    color: #666;
+    font-size: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.svc-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+.svc-benefit-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    border: 1px solid rgba(34,3,140,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.svc-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(34,3,140,0.1);
+}
+.svc-benefit-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #22038C, #00BCD4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 14px;
+}
+.svc-benefit-card h4 {
+    color: #0D0B2B;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.svc-benefit-card p {
+    color: #666;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ---- Sección: Proceso / Tecnologías ---- */
+.svc-process {
+    background: #fff;
+    padding: 90px 0;
+}
+.svc-process-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+.svc-process-header h2 {
+    color: #0D0B2B;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.svc-process-header p {
+    color: #666;
+    font-size: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.svc-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.svc-step {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 36px;
+}
+.svc-step:last-child { padding-bottom: 0; }
+.svc-step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.svc-step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22038C, #00BCD4);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.svc-step-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(34,3,140,0.2), transparent);
+    margin-top: 6px;
+    min-height: 40px;
+}
+.svc-step:last-child .svc-step-line { display: none; }
+.svc-step-content {
+    padding-top: 10px;
+}
+.svc-step-content h4 {
+    color: #0D0B2B;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.svc-step-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Tech tags */
+.svc-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+    justify-content: center;
+}
+.svc-tech-tag {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 50px;
+    background: rgba(34,3,140,0.07);
+    border: 1px solid rgba(34,3,140,0.12);
+    color: #22038C;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* ---- CTA Final ---- */
+.svc-cta {
+    background: linear-gradient(135deg, #f0f0ff 0%, #e8f9fc 100%);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(34,3,140,0.08);
+}
+.svc-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(34,3,140,0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+.svc-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,188,212,0.09) 0%, transparent 65%);
+    pointer-events: none;
+}
+.svc-cta-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.svc-cta-inner h2 {
+    color: #0D0B2B;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.svc-cta-inner p {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 36px;
+    line-height: 1.7;
+}
+.svc-cta-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .svc-overview-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 768px) {
+    .svc-hero { padding: 120px 0 80px; }
+    .svc-overview, .svc-benefits, .svc-process, .svc-cta { padding: 64px 0; }
+    .svc-benefits-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+    .svc-hero h1 { font-size: 1.9rem; }
+    .svc-hero-ctas { flex-direction: column; }
+    .btn-svc-primary, .btn-svc-outline { text-align: center; }
+    .svc-benefits-grid { grid-template-columns: 1fr; }
+    .svc-cta-actions { flex-direction: column; align-items: center; }
+}
