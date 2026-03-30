@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 108" fill="none">
+  <!-- ========== CONEXIÓN LINES ========== -->
+  <!-- orange-top → teal-center -->
+  <path d="M42 26 Q42 58 64 58" stroke="#7a7a9a" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- teal-center → orange-ring -->
+  <path d="M64 58 Q64 26 82 26" stroke="#7a7a9a" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- teal-center → teal-right -->
+  <line x1="78" y1="58" x2="98" y2="58" stroke="#7a7a9a" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- teal-center → purple-bottom -->
+  <path d="M64 72 Q50 86 42 86" stroke="#7a7a9a" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- ========== NODO 1: Naranja sólido (arriba-izq) ========== -->
+  <circle cx="42" cy="26" r="14" fill="#E8650A"/>
+  <circle cx="42" cy="26" r="8" fill="#FF9A4D" opacity="0.9"/>
+
+  <!-- ========== NODO 2: Naranja ring con punto (arriba-der) ========== -->
+  <circle cx="91" cy="26" r="12" fill="none" stroke="#E8650A" stroke-width="2.8"/>
+  <circle cx="91" cy="26" r="5" fill="#E8650A"/>
+
+  <!-- ========== NODO 3: Teal doble-ring, GRANDE (centro) ========== -->
+  <circle cx="64" cy="58" r="17" fill="none" stroke="#00BCD4" stroke-width="3.2"/>
+  <circle cx="64" cy="58" r="9" fill="#00BCD4"/>
+  <circle cx="64" cy="58" r="4" fill="rgba(255,255,255,0.35)"/>
+
+  <!-- ========== NODO 4: Teal sólido (derecha) ========== -->
+  <circle cx="107" cy="58" r="13" fill="#00BCD4"/>
+  <circle cx="107" cy="58" r="6" fill="rgba(255,255,255,0.3)"/>
+
+  <!-- ========== NODO 5: Morado sólido (abajo-izq) ========== -->
+  <circle cx="42" cy="86" r="13" fill="#7B2FBE"/>
+  <circle cx="42" cy="86" r="6" fill="#a855f7" opacity="0.7"/>
+
+  <!-- ========== TEXTO ========== -->
+  <text x="138" y="64" font-family="Poppins, Arial Black, sans-serif" font-size="41" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#FFFFFF">NexFlow</tspan><tspan fill="#00BCD4">CRM</tspan>
+  </text>
+  <text x="140" y="84" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.8">Designed by Nexgen Cloudware</text>
+</svg>

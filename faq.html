@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes - NexGen Cloudware</title>
-    <meta name="description" content="Encuentra respuestas a tus dudas sobre los servicios de transformación digital, nube, automatización y más en NexGen Cloudware.">
+    <title>Preguntas Frecuentes — NexGen Cloudware</title>
+    <meta name="description" content="Encuentra respuestas a tus dudas sobre los servicios de transformación digital, nube, automatización, NexFlow CRM, NexMeet AI, Angie AI y más en NexGen Cloudware.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="icon" href="images/logo-nexgen-cloudware-vertical.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header class="sticky-header">
         <div class="container header-content">
             <div class="logo">
@@ -25,38 +28,427 @@
                 </button>
                 <ul class="nav-list">
                     <li><a href="index.html#acerca-de-nosotros">Quiénes Somos</a></li>
+                    <li><a href="index.html#nuestros-productos">Productos</a></li>
                     <li><a href="index.html#nuestros-servicios">Servicios</a></li>
                     <li><a href="index.html#contacto">Contacto</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="faq.html" class="nav-active">Preguntas Frecuentes</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+
+        <!-- ===== HERO ===== -->
         <section class="faq-hero">
-            <div class="container">
-                <h1>Preguntas frecuentes</h1>
-                <h2>Encuentra respuestas a tus dudas</h2>
+            <div class="faq-hero-bg"></div>
+            <div class="faq-hero-grid" aria-hidden="true"></div>
+            <div class="container faq-hero-inner">
+                <div class="faq-hero-text">
+                    <h1>Preguntas <span class="faq-highlight">Frecuentes</span></h1>
+                    <p>Encuentra respuestas claras sobre nuestros servicios, productos y procesos. Si no encuentras lo que buscas, nuestro equipo está disponible para ayudarte.</p>
+                </div>
+                <!-- Tarjetas de categoría (flotan sobre la sección de contenido) -->
+                <div class="faq-cat-cards">
+                    <button class="faq-cat-card faq-cat-btn active" data-cat="all">
+                        <div class="fcc-icon fcc-icon-all">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Todas</span>
+                            <span class="fcc-count" id="count-all"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="general">
+                        <div class="fcc-icon fcc-icon-general">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">General</span>
+                            <span class="fcc-count" id="count-general"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="servicios">
+                        <div class="fcc-icon fcc-icon-servicios">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Servicios</span>
+                            <span class="fcc-count" id="count-servicios"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="productos">
+                        <div class="fcc-icon fcc-icon-productos">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Productos</span>
+                            <span class="fcc-count" id="count-productos"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="soporte">
+                        <div class="fcc-icon fcc-icon-soporte">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Soporte y Proyectos</span>
+                            <span class="fcc-count" id="count-soporte"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
             </div>
         </section>
+
+        <!-- ===== PREGUNTAS ===== -->
         <section class="faq-content">
             <div class="container">
-                <div class="faq-item">
-                    <h3>¿Qué servicios ofrece NexGen Cloudware?</h3>
-                    <p>NexGen Cloudware se especializa en ofrecer una variedad de servicios tecnológicos diseñados para optimizar y modernizar las operaciones de las organizaciones. Entre nuestros servicios se encuentran el desarrollo de sistemas digitales personalizados, consultoría en TI, soluciones SaaS, recuperación de datos, alojamiento web y migración a la nube en plataformas como Azure, AWS y Google Cloud. Nos enfocamos en entender las necesidades específicas de cada cliente para brindar soluciones que realmente marquen la diferencia en su eficiencia y competitividad.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Cómo puedo migrar mi infraestructura a la nube?</h3>
-                    <p>Migrar tu infraestructura a la nube es un proceso que requiere planificación y ejecución cuidadosa. En NexGen Cloudware, comenzamos realizando un análisis exhaustivo de tus sistemas actuales y tus necesidades futuras. Luego, diseñamos un plan de migración personalizado que se adapte a tu organización. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando que la transición sea fluida y sin interrupciones, permitiéndote aprovechar al máximo las ventajas de la nube como la escalabilidad y la eficiencia operativa.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Qué beneficios trae la automatización de procesos?</h3>
-                    <p>La automatización de procesos es una de las claves para mejorar la eficiencia en cualquier organización. Implementar soluciones de automatización permite reducir errores humanos, optimizar tiempos de respuesta y liberar a tu equipo de tareas repetitivas. En NexGen Cloudware, ayudamos a las empresas a identificar áreas que pueden beneficiarse de esta transformación, implementando tecnologías avanzadas que maximizan la productividad. Con una automatización efectiva, tu negocio no solo ahorrará recursos, sino que también podrá centrarse en actividades estratégicas que impulsen su crecimiento.</p>
+
+                <div class="faq-list" id="faq-list">
+
+                    <!-- ======= GENERAL ======= -->
+                    <div class="faq-group" data-cat="general">
+                        <div class="faq-group-header">
+                            <span class="fgh-icon fgh-general">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            </span>
+                            General
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="general">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué es NexGen Cloudware?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NexGen Cloudware es una empresa de servicios de tecnología de la información (TI) con sede en Monterrey, Nuevo León, México. Nos especializamos en impulsar la transformación digital de las organizaciones mediante soluciones innovadoras de inteligencia artificial, automatización de procesos, migración a la nube y desarrollo de software a la medida. Además, contamos con tres productos propios: <strong>NexFlow CRM</strong>, <strong>NexMeet AI</strong> y <strong>Angie AI</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="general">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué servicios ofrece NexGen Cloudware?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Ofrecemos un portafolio integral de servicios tecnológicos:</p>
+                                <ul>
+                                    <li><strong>Nube:</strong> migración, optimización y administración en Azure, AWS y Google Cloud.</li>
+                                    <li><strong>Consultoría de TI:</strong> estrategias tecnológicas alineadas a tus objetivos de negocio.</li>
+                                    <li><strong>Transformación Digital:</strong> rediseño de procesos con tecnología avanzada.</li>
+                                    <li><strong>Fábrica de Software:</strong> desarrollo de sistemas y aplicaciones a la medida.</li>
+                                    <li><strong>Automatización de Procesos:</strong> flujos inteligentes que reducen tiempos y costos.</li>
+                                    <li><strong>Análisis de Datos:</strong> inteligencia de negocio e insights estratégicos.</li>
+                                    <li><strong>Capacitación Tecnológica:</strong> formación especializada para equipos.</li>
+                                    <li><strong>Soporte Técnico:</strong> continuidad operativa y mantenimiento de infraestructura.</li>
+                                    <li><strong>Comercialización de Tecnologías:</strong> implementación de herramientas líderes del mercado.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="general">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿En qué industrias o sectores trabajan?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Trabajamos con organizaciones de muy diversos sectores: salud, retail, manufactura, servicios profesionales, educación, logística, gimnasios, clínicas y startups tecnológicas, entre otros. Nuestras soluciones son adaptables a cualquier industria que necesite digitalizar, automatizar u optimizar sus operaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="general">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Trabajan solo con empresas grandes o también con PYMEs?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Trabajamos con organizaciones de todos los tamaños. Desde startups y pequeñas empresas que están dando sus primeros pasos digitales, hasta medianas y grandes corporaciones que buscan escalar su operación. Cada solución se diseña según las necesidades, presupuesto y objetivos específicos del cliente.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="general">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Cómo puedo contactar a NexGen Cloudware?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Puedes comunicarte con nosotros a través de cualquiera de estos canales:</p>
+                                <ul>
+                                    <li><strong>Correo electrónico:</strong> administracion@nexgencloudware.com</li>
+                                    <li><strong>Teléfono:</strong> +52 811 166 6884</li>
+                                    <li><strong>Formulario de contacto:</strong> disponible en la sección <a href="index.html#contacto">Contáctanos</a> de nuestro sitio web.</li>
+                                    <li><strong>Redes sociales:</strong> Instagram, Facebook, LinkedIn y X (@nexgencloudware).</li>
+                                </ul>
+                                <p>Respondemos en menos de 24 horas en días hábiles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ======= SERVICIOS ======= -->
+                    <div class="faq-group" data-cat="servicios">
+                        <div class="faq-group-header">
+                            <span class="fgh-icon fgh-servicios">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </span>
+                            Servicios
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Cómo funciona el proceso de migración a la nube?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Nuestro proceso de migración a la nube sigue cuatro etapas principales:</p>
+                                <ol>
+                                    <li><strong>Diagnóstico:</strong> análisis de tu infraestructura actual, sistemas, datos y requisitos de negocio.</li>
+                                    <li><strong>Planificación:</strong> diseño de la arquitectura en la nube y hoja de ruta de migración.</li>
+                                    <li><strong>Ejecución:</strong> migración por fases para garantizar continuidad operativa sin interrupciones.</li>
+                                    <li><strong>Optimización:</strong> ajuste de rendimiento, seguridad y costos una vez en producción.</li>
+                                </ol>
+                                <p>Trabajamos con Azure, AWS y Google Cloud según las necesidades de cada organización.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué beneficios trae la automatización de procesos?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>La automatización de procesos transforma la operación de las empresas de múltiples maneras:</p>
+                                <ul>
+                                    <li>Reducción de errores humanos en tareas repetitivas.</li>
+                                    <li>Ahorro de tiempo y costos operativos.</li>
+                                    <li>Mayor velocidad de respuesta ante clientes y proveedores.</li>
+                                    <li>Liberación del equipo para enfocarse en actividades estratégicas.</li>
+                                    <li>Trazabilidad y auditoría completa de cada proceso.</li>
+                                    <li>Escalabilidad sin necesidad de aumentar proporcionalmente el personal.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Desarrollan software completamente a la medida?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Nuestra fábrica de software diseña y construye aplicaciones, sistemas internos, plataformas web y móviles desde cero, adaptadas exactamente a los procesos y necesidades de tu organización. Trabajamos con metodologías ágiles, entregando avances en sprints y manteniendo comunicación constante contigo durante todo el desarrollo.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Ofrecen capacitación tecnológica para equipos internos?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Diseñamos programas de capacitación personalizados para equipos de TI y usuarios de negocio. Los temas incluyen herramientas en la nube, uso de IA, manejo de datos, y las plataformas específicas que implementamos para tu empresa. Las capacitaciones pueden ser presenciales, en línea o híbridas.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué incluye el análisis de datos e inteligencia de negocio?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Nuestro servicio de análisis de datos cubre desde la integración de fuentes hasta la visualización y toma de decisiones:</p>
+                                <ul>
+                                    <li>Integración y centralización de datos de múltiples sistemas.</li>
+                                    <li>Construcción de dashboards e informes con Power BI, Tableau u otras herramientas.</li>
+                                    <li>Modelos predictivos y analítica avanzada con Python y ML.</li>
+                                    <li>Implementación de Data Warehouse o Data Lake según el volumen.</li>
+                                    <li>Capacitación para que tu equipo interprete y actúe sobre los datos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ======= PRODUCTOS ======= -->
+                    <div class="faq-group" data-cat="productos">
+                        <div class="faq-group-header">
+                            <span class="fgh-icon fgh-productos">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                            </span>
+                            Nuestros Productos
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué es NexFlow CRM y para qué tipo de empresa es?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p><strong>NexFlow CRM</strong> es una plataforma integral de gestión de clientes, contratos y operaciones. Centraliza en un solo sistema toda la información de tu negocio: clientes, contratos, planes, citas, servicios, sucursales y más.</p>
+                                <p>Es ideal para empresas con operaciones recurrentes como gimnasios, clínicas, centros de servicio, despachos profesionales y cualquier negocio que necesite controlar su cartera de clientes y automatizar su agenda y facturación.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué es NexMeet AI?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p><strong>NexMeet AI</strong> es una plataforma de inteligencia artificial que se une a tus videollamadas para transcribir cada conversación en tiempo real, generar resúmenes ejecutivos automáticos al finalizar la reunión y detectar compromisos y tareas para asignarlos automáticamente a los participantes.</p>
+                                <p>Es compatible con Zoom, Google Meet, Microsoft Teams y más. Elimina la necesidad de tomar notas manuales, redactar minutas o hacer seguimiento manual de acuerdos.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué es Angie AI y cómo puede ayudar a mi empresa?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p><strong>Angie AI</strong> es un asistente inteligente empresarial que analiza los datos de tus sistemas operativos para generar reportes dinámicos, construir dashboards adaptables y responder preguntas sobre el rendimiento de tu negocio en lenguaje natural.</p>
+                                <p>Por ejemplo, puedes preguntarle: <em>"¿Cuántos clientes activos tenemos?", "¿Cuál es el ingreso por sucursal este mes?", "¿Qué contratos están por vencer?"</em> y recibirás respuestas con datos reales en tiempo real. Se integra con CRMs, ERPs, bases de datos y APIs de terceros.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Los tres productos se integran entre sí?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. NexFlow CRM, NexMeet AI y Angie AI están diseñados para trabajar de forma complementaria dentro del ecosistema NexGen Cloudware:</p>
+                                <ul>
+                                    <li><strong>NexFlow CRM</strong> centraliza toda la operación del negocio.</li>
+                                    <li><strong>NexMeet AI</strong> alimenta el CRM con acuerdos y tareas detectadas en reuniones.</li>
+                                    <li><strong>Angie AI</strong> analiza la información del CRM y otros sistemas para generar insights estratégicos.</li>
+                                </ul>
+                                <p>También pueden implementarse de forma independiente según las necesidades de cada empresa.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Puedo solicitar una demostración de los productos?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Por supuesto. Puedes solicitar una demo gratuita y personalizada de cualquiera de nuestros productos a través del <a href="index.html#contacto">formulario de contacto</a> o escribiéndonos directamente a administracion@nexgencloudware.com. Agendamos una sesión donde te mostramos el producto en funcionamiento con casos de uso relevantes para tu industria.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="productos">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Los productos son adaptables a las necesidades de mi empresa?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Aunque nuestros productos cuentan con una base funcional sólida, se configuran y adaptan a los flujos, terminología y procesos específicos de cada cliente. Esto incluye módulos, campos personalizados, roles de usuario, reportes específicos e integraciones con los sistemas que ya utilizas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ======= SOPORTE Y PROYECTOS ======= -->
+                    <div class="faq-group" data-cat="soporte">
+                        <div class="faq-group-header">
+                            <span class="fgh-icon fgh-soporte">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </span>
+                            Soporte y Proyectos
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="soporte">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Ofrecen soporte técnico continuo después de la implementación?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Ofrecemos planes de soporte técnico post-implementación que incluyen atención a incidencias, mantenimiento preventivo, actualizaciones y monitoreo proactivo de sistemas. Los niveles de servicio (SLA) se definen según las necesidades operativas de cada cliente.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="soporte">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Cuánto tiempo tarda en implementarse una solución?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Los tiempos varían según la complejidad del proyecto:</p>
+                                <ul>
+                                    <li><strong>Implementación de productos (NexFlow, NexMeet, Angie):</strong> de 2 a 6 semanas dependiendo de la personalización requerida.</li>
+                                    <li><strong>Migraciones a la nube:</strong> de 4 a 16 semanas según el volumen y complejidad de la infraestructura.</li>
+                                    <li><strong>Desarrollo de software a la medida:</strong> de 8 semanas en adelante, con entregas parciales en cada sprint.</li>
+                                    <li><strong>Automatización de procesos:</strong> de 3 a 10 semanas según el número de flujos.</li>
+                                </ul>
+                                <p>Siempre establecemos una hoja de ruta clara con fechas de entrega desde el inicio del proyecto.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="soporte">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Cómo es el proceso para iniciar un proyecto con NexGen Cloudware?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>El proceso es simple y transparente:</p>
+                                <ol>
+                                    <li><strong>Contacto inicial:</strong> nos escribes por cualquier canal y agendamos una llamada de descubrimiento gratuita.</li>
+                                    <li><strong>Diagnóstico:</strong> entendemos tu situación actual, objetivos y necesidades específicas.</li>
+                                    <li><strong>Propuesta:</strong> elaboramos una propuesta técnica y comercial personalizada.</li>
+                                    <li><strong>Acuerdo:</strong> definimos alcance, tiempos, entregables y condiciones contractuales.</li>
+                                    <li><strong>Ejecución:</strong> iniciamos el proyecto con comunicación constante y reportes de avance.</li>
+                                    <li><strong>Entrega y soporte:</strong> hacemos go-live y te acompañamos en la adopción.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="soporte">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Mis datos y los de mis clientes están seguros con ustedes?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>La seguridad y confidencialidad de la información es una prioridad fundamental para NexGen Cloudware. Trabajamos bajo estrictos protocolos de seguridad, firmamos acuerdos de confidencialidad (NDA) con todos nuestros clientes y nuestras soluciones en la nube utilizan las capas de seguridad de Azure, AWS y Google Cloud. Además, cumplimos con las normativas de protección de datos aplicables.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="soporte">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Ofrecen contratos de mantenimiento y evolución de sistemas?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Además del soporte correctivo, ofrecemos contratos de mantenimiento evolutivo que incluyen nuevas funcionalidades, mejoras de rendimiento, actualizaciones de seguridad y adaptaciones a cambios en el negocio. Esto garantiza que tu inversión tecnológica siga siendo relevante y competitiva a largo plazo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /faq-list -->
             </div>
         </section>
+
+        <!-- ===== CTA FINAL ===== -->
+        <section class="faq-cta-section">
+            <div class="container faq-cta-inner">
+                <div class="faq-cta-text">
+                    <h2>¿Tienes una pregunta diferente?</h2>
+                    <p>Nuestro equipo está listo para responder todas tus dudas y ayudarte a encontrar la solución ideal para tu empresa.</p>
+                </div>
+                <div class="faq-cta-actions">
+                    <a href="index.html#contacto" class="btn-faq-cta-primary">Contactar ahora</a>
+                    <a href="index.html#nuestros-productos" class="btn-faq-cta-outline">Ver nuestros productos</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
@@ -64,6 +456,7 @@
             </div>
             <nav class="footer-nav">
                 <ul>
+                    <li><a href="index.html#nuestros-productos">Productos</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
                     <li><a href="index.html#contacto">Contáctanos</a></li>
@@ -74,6 +467,8 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 </html>
