@@ -11,25 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="sticky-header">
-        <div class="container header-content">
-            <div class="logo">
+    <header class="sticky-header ng-header">
+        <div class="ng-header-bg"></div>
+        <div class="container header-content ng-header-inner">
+            <div class="logo ng-logo">
                 <a href="index.html">
                     <img src="images/logo-header-nexgen.png" alt="Logotipo NexGen Cloudware">
                 </a>
             </div>
-            <nav class="main-nav">
-                <button class="hamburger-menu" aria-label="Abrir menú de navegación">
+            <nav class="main-nav ng-nav">
+                <button class="hamburger-menu ng-hamburger" aria-label="Abrir menú de navegación">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
-                <ul class="nav-list">
+                <ul class="nav-list ng-nav-list">
                     <li><a href="#acerca-de-nosotros">Quiénes Somos</a></li>
                     <li><a href="#nuestros-productos">Productos</a></li>
                     <li><a href="#nuestros-servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="ng-nav-cta"><a href="#contacto" class="ng-header-btn">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,145 +38,148 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section hero-redesign">
-            <div class="hero-bg-overlay"></div>
-            <div class="hero-particles">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="container hero-inner">
-                <div class="hero-text">
-                    <span class="hero-badge">Innovación · IA · Automatización</span>
-                    <h1 class="sb-hero__title">Transformamos tu empresa con <span class="hero-highlight">tecnología inteligente</span></h1>
-                    <p class="sb-hero__subtitle">En NexGen Cloudware diseñamos soluciones digitales a la medida de tu negocio: desde inteligencia artificial hasta automatización de procesos, para que operes con mayor eficiencia y competitividad.</p>
+        <section class="hero-section hero-ng is-visible">
+            <div class="hero-ng-grid"></div>
+            <div class="hero-ng-glow hero-ng-glow-1"></div>
+            <div class="hero-ng-glow hero-ng-glow-2"></div>
+            <div class="hero-ng-glow hero-ng-glow-3"></div>
+            <div class="container hero-ng-inner">
+
+                <!-- Columna izquierda: texto -->
+                <div class="hero-ng-text">
+                    <div class="hero-ng-eyebrow">
+                        <span class="hero-ng-dot"></span>
+                        <span>Empresa de Transformación Digital &amp; IA</span>
+                    </div>
+                    <h1 class="hero-ng-title">
+                        El socio tecnológico que <span class="hero-ng-highlight">impulsa tu empresa</span> hacia el futuro
+                    </h1>
+                    <p class="hero-ng-subtitle">Diseñamos, desarrollamos e implementamos soluciones de IA, automatización y nube adaptadas a los retos reales de tu negocio.</p>
+
+                    <!-- Mini stats inline -->
+                    <div class="hero-ng-stats">
+                        <div class="hns-item">
+                            <span class="hns-num">3<span class="hns-plus">+</span></span>
+                            <span class="hns-lbl">Productos propios</span>
+                        </div>
+                        <div class="hns-div"></div>
+                        <div class="hns-item">
+                            <span class="hns-num">100<span class="hns-plus">%</span></span>
+                            <span class="hns-lbl">En la nube</span>
+                        </div>
+                        <div class="hns-div"></div>
+                        <div class="hns-item">
+                            <span class="hns-num">24/7</span>
+                            <span class="hns-lbl">Soporte activo</span>
+                        </div>
+                    </div>
+
                     <div class="hero-cta-group">
-                        <a href="#nuestros-productos" class="btn btn-hero-primary">Conoce nuestros productos</a>
+                        <a href="#nuestros-productos" class="btn btn-hero-primary">Ver nuestros productos</a>
                         <a href="#contacto" class="btn btn-hero-outline">Habla con un experto</a>
                     </div>
                 </div>
-                <div class="hero-visual">
 
-                    <!-- Card 1: KPI / Clientes activos -->
-                    <div class="hero-card-float card-1">
-                        <div class="hc-header">
-                            <div class="hc-icon-wrap hc-blue">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-                                </svg>
-                            </div>
-                            <span class="hc-label">Clientes activos</span>
+                <!-- Columna derecha: ecosistema de productos -->
+                <div class="hero-ng-ecosystem" aria-hidden="true">
+
+                    <!-- SVG de líneas de conexión -->
+                    <svg class="eco-lines" viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Líneas del centro a cada nodo satélite -->
+                        <!-- Centro → NexFlow CRM (superior izq) -->
+                        <line x1="280" y1="280" x2="120" y2="110" stroke="url(#lineGrad1)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                        <!-- Centro → NexMeet AI (superior der) -->
+                        <line x1="280" y1="280" x2="440" y2="110" stroke="url(#lineGrad2)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                        <!-- Centro → Angie AI (abajo centro) -->
+                        <line x1="280" y1="280" x2="280" y2="470" stroke="url(#lineGrad3)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                        <!-- Líneas satélite-satélite (triangulación) -->
+                        <line x1="120" y1="110" x2="440" y2="110" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        <line x1="120" y1="110" x2="280" y2="470" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        <line x1="440" y1="110" x2="280" y2="470" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                        <!-- Pulsos animados en las líneas -->
+                        <circle r="5" fill="#00BCD4" opacity="0.9">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s">
+                                <mpath href="#pathToNexflow"/>
+                            </animateMotion>
+                        </circle>
+                        <circle r="5" fill="#6C3CE8" opacity="0.9">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.8s">
+                                <mpath href="#pathToNexmeet"/>
+                            </animateMotion>
+                        </circle>
+                        <circle r="5" fill="#00BCD4" opacity="0.9">
+                            <animateMotion dur="3.2s" repeatCount="indefinite" begin="1.6s">
+                                <mpath href="#pathToAngie"/>
+                            </animateMotion>
+                        </circle>
+                        <!-- Paths ocultos para animar pulsos -->
+                        <path id="pathToNexflow" d="M280,280 L120,110" stroke="none"/>
+                        <path id="pathToNexmeet" d="M280,280 L440,110" stroke="none"/>
+                        <path id="pathToAngie"   d="M280,280 L280,470" stroke="none"/>
+                        <defs>
+                            <linearGradient id="lineGrad1" x1="280" y1="280" x2="120" y2="110" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#22038C" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#00BCD4" stop-opacity="0.6"/>
+                            </linearGradient>
+                            <linearGradient id="lineGrad2" x1="280" y1="280" x2="440" y2="110" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#22038C" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#6C3CE8" stop-opacity="0.6"/>
+                            </linearGradient>
+                            <linearGradient id="lineGrad3" x1="280" y1="280" x2="280" y2="470" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#22038C" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#00BCD4" stop-opacity="0.5"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Nodo central: NexGen Cloudware -->
+                    <div class="eco-node eco-center">
+                        <div class="eco-center-ring"></div>
+                        <div class="eco-center-inner">
+                            <img src="images/logo-nexgen-cloudware-vertical.png" alt="NexGen" class="eco-center-logo">
                         </div>
-                        <div class="hc-value">248</div>
-                        <div class="hc-trend hc-trend-up">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
-                            <span>+12% este mes</span>
-                        </div>
-                        <div class="hc-sparkline">
-                            <svg viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <polyline points="0,22 13,18 26,20 39,14 52,10 65,7 80,3" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <polyline points="0,22 13,18 26,20 39,14 52,10 65,7 80,3 80,28 0,28" fill="url(#sparkGrad)" opacity="0.2"/>
-                                <defs>
-                                    <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#00BCD4"/>
-                                        <stop offset="100%" stop-color="transparent"/>
-                                    </linearGradient>
-                                </defs>
+                    </div>
+
+                    <!-- Nodo satélite 1: NexFlow CRM -->
+                    <div class="eco-node eco-sat eco-sat-1">
+                        <div class="eco-sat-icon" style="background: rgba(232,101,10,0.15); border-color: rgba(232,101,10,0.35);">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8650A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
                             </svg>
                         </div>
+                        <span class="eco-sat-name">NexFlow <strong>CRM</strong></span>
+                        <span class="eco-sat-tag" style="color:#E8650A;">Gestión de clientes</span>
                     </div>
 
-                    <!-- Card 2: Reunión transcrita (NexMeet) -->
-                    <div class="hero-card-float card-2">
-                        <div class="hc-header">
-                            <div class="hc-icon-wrap hc-purple">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                                </svg>
-                            </div>
-                            <span class="hc-label">Reunión — en curso</span>
-                            <span class="hc-live-dot"></span>
+                    <!-- Nodo satélite 2: NexMeet AI -->
+                    <div class="eco-node eco-sat eco-sat-2">
+                        <div class="eco-sat-icon" style="background: rgba(108,60,232,0.15); border-color: rgba(108,60,232,0.35);">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6C3CE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                            </svg>
                         </div>
-                        <div class="hc-transcript-lines">
-                            <div class="hc-tline">
-                                <span class="hc-sp hc-sp-a">JR</span>
-                                <div class="hc-tbar" style="width:72%"></div>
-                            </div>
-                            <div class="hc-tline">
-                                <span class="hc-sp hc-sp-b">ML</span>
-                                <div class="hc-tbar" style="width:55%"></div>
-                            </div>
-                            <div class="hc-tline hc-tline-active">
-                                <span class="hc-sp hc-sp-c">CA</span>
-                                <div class="hc-tbar hc-tbar-active" style="width:40%"></div>
-                            </div>
-                        </div>
-                        <div class="hc-tag">✦ Tarea detectada</div>
+                        <span class="eco-sat-name">NexMeet <strong>AI</strong></span>
+                        <span class="eco-sat-tag" style="color:#a78bfa;">Reuniones inteligentes</span>
                     </div>
 
-                    <!-- Card 3: Automatización de proceso -->
-                    <div class="hero-card-float card-3">
-                        <div class="hc-header">
-                            <div class="hc-icon-wrap hc-orange">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
-                                    <path d="M15.54 8.46a5 5 0 010 7.07M8.46 8.46a5 5 0 000 7.07"/>
-                                </svg>
-                            </div>
-                            <span class="hc-label">Flujo automatizado</span>
+                    <!-- Nodo satélite 3: Angie AI -->
+                    <div class="eco-node eco-sat eco-sat-3">
+                        <div class="eco-sat-icon" style="background: rgba(0,188,212,0.12); border-color: rgba(0,188,212,0.3);">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 010 2h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 010-2h1a7 7 0 017-7h1V5.73A2 2 0 0110 4a2 2 0 012-2z"/>
+                                <circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/>
+                            </svg>
                         </div>
-                        <div class="hc-flow">
-                            <div class="hc-step hc-done">
-                                <span class="hc-step-dot"></span>
-                                <span>Lead capturado</span>
-                            </div>
-                            <div class="hc-step-line hc-line-done"></div>
-                            <div class="hc-step hc-done">
-                                <span class="hc-step-dot"></span>
-                                <span>Contrato generado</span>
-                            </div>
-                            <div class="hc-step-line"></div>
-                            <div class="hc-step hc-running">
-                                <span class="hc-step-dot hc-dot-pulse"></span>
-                                <span>Notificación enviada</span>
-                            </div>
-                        </div>
+                        <span class="eco-sat-name">Angie <strong>AI</strong></span>
+                        <span class="eco-sat-tag" style="color:#00BCD4;">Asistente empresarial</span>
                     </div>
 
-                    <!-- Card 4: Angie AI — insight -->
-                    <div class="hero-card-float card-4">
-                        <div class="hc-header">
-                            <div class="hc-icon-wrap hc-teal">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
-                                    <line x1="6" y1="20" x2="6" y2="14"/>
-                                </svg>
-                            </div>
-                            <span class="hc-label">Angie AI · Reporte</span>
-                        </div>
-                        <div class="hc-mini-bars">
-                            <div class="hc-bar-col">
-                                <div class="hc-bar-fill" style="height:45%"></div>
-                                <span class="hc-bar-lbl">Ene</span>
-                            </div>
-                            <div class="hc-bar-col">
-                                <div class="hc-bar-fill" style="height:62%"></div>
-                                <span class="hc-bar-lbl">Feb</span>
-                            </div>
-                            <div class="hc-bar-col">
-                                <div class="hc-bar-fill" style="height:55%"></div>
-                                <span class="hc-bar-lbl">Mar</span>
-                            </div>
-                            <div class="hc-bar-col">
-                                <div class="hc-bar-fill hc-bar-active" style="height:88%"></div>
-                                <span class="hc-bar-lbl">Abr</span>
-                            </div>
-                        </div>
-                        <div class="hc-trend hc-trend-up">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
-                            <span>Ingresos +18% vs mes anterior</span>
-                        </div>
-                    </div>
+                    <!-- Servicios flotantes (chips pequeños) -->
+                    <div class="eco-chip eco-chip-1">☁️ Cloud</div>
+                    <div class="eco-chip eco-chip-2">🔒 Ciberseguridad</div>
+                    <div class="eco-chip eco-chip-3">⚙️ Automatización</div>
+                    <div class="eco-chip eco-chip-4">📊 Data &amp; Analytics</div>
 
                 </div>
             </div>
@@ -310,7 +314,7 @@
                     <div class="product-card-inner">
                         <div class="product-info">
                             <div class="product-logo-wrap">
-                                <img src="images/products/logo-nexflow-crm-dark.svg" alt="NexFlow CRM" class="product-logo">
+                                <img src="images/products/logotipo-nexflow-light.png" alt="NexFlow CRM" class="product-logo">
                             </div>
                             <p class="product-tagline">El núcleo operativo de tu empresa</p>
                             <p class="product-description">Plataforma integral de gestión de clientes, contratos y operaciones diseñada para centralizar, automatizar y optimizar todos los procesos comerciales de tu organización en un solo ecosistema digital.</p>
@@ -414,7 +418,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-logo-wrap">
-                                <img src="images/products/logo-nexmeet-ai-dark.svg" alt="NexMeet AI" class="product-logo">
+                                <img src="images/products/logotipo-nexmeet-light.png" alt="NexMeet AI" class="product-logo">
                             </div>
                             <p class="product-tagline">Tu reunión transcrita, resumida y con tareas asignadas</p>
                             <p class="product-description">NexMeet AI se une a tus videollamadas para transcribir cada palabra en tiempo real, generar resúmenes ejecutivos automáticos y detectar compromisos y tareas para asignarlas a los participantes. Nunca más pierdas un acuerdo importante de tus reuniones.</p>
@@ -806,21 +810,82 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="images/logo-nexgen-cloudware-blanco.png" alt="Logotipo NexGen Cloudware">
+    <footer class="ng-footer">
+        <div class="ng-footer-glow ng-footer-glow-1"></div>
+        <div class="ng-footer-glow ng-footer-glow-2"></div>
+        <div class="container ng-footer-inner">
+
+            <!-- Columna: Marca -->
+            <div class="ngf-brand">
+                <img src="images/logo-nexgen-cloudware-blanco.png" alt="NexGen Cloudware" class="ngf-logo">
+                <p class="ngf-tagline">Transformación digital e inteligencia artificial para empresas que quieren liderar el futuro.</p>
+                <div class="ngf-social">
+                    <a href="https://www.instagram.com/nexgencloudware" target="_blank" aria-label="Instagram" class="ngf-social-btn">
+                        <img src="icons/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61574205715481" target="_blank" aria-label="Facebook" class="ngf-social-btn">
+                        <img src="icons/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.x.com/nexgencloudware" target="_blank" aria-label="X" class="ngf-social-btn">
+                        <img src="icons/x.png" alt="X">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nexgencloudware" target="_blank" aria-label="LinkedIn" class="ngf-social-btn">
+                        <img src="icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#nuestros-productos">Productos</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
-                    <li><a href="index.html#contacto">Contáctanos</a></li>
+
+            <!-- Columna: Productos -->
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Productos</h4>
+                <ul class="ngf-links">
+                    <li><a href="#nuestros-productos">NexFlow CRM</a></li>
+                    <li><a href="#nuestros-productos">NexMeet AI</a></li>
+                    <li><a href="#nuestros-productos">Angie AI</a></li>
                 </ul>
-            </nav>
-            <div class="footer-copyright">
-                <p>&copy; 2025 NexGen Cloudware. Todos los derechos reservados.</p>
+            </div>
+
+            <!-- Columna: Empresa -->
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Empresa</h4>
+                <ul class="ngf-links">
+                    <li><a href="#acerca-de-nosotros">Quiénes Somos</a></li>
+                    <li><a href="#nuestros-servicios">Servicios</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna: Contacto -->
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Contacto</h4>
+                <ul class="ngf-links ngf-contact-list">
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Monterrey, NL, México
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:administracion@nexgencloudware.com">administracion@nexgencloudware.com</a>
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.5 6.5l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <a href="tel:+528111666884">+52 811 166 6884</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Barra inferior -->
+        <div class="ng-footer-bar">
+            <div class="container ng-footer-bar-inner">
+                <p class="ngf-copy">&copy; 2025 NexGen Cloudware. Todos los derechos reservados.</p>
+                <div class="ngf-badges">
+                    <span class="ngf-badge">☁️ Cloud</span>
+                    <span class="ngf-badge">🤖 IA</span>
+                    <span class="ngf-badge">🔒 Seguridad</span>
+                </div>
             </div>
         </div>
     </footer>
