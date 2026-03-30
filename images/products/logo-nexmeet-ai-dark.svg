@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 108" fill="none">
+  <!-- ========== ÍCONO: CÁMARA + TRANSCRIPCIÓN ========== -->
+
+  <!-- Cuerpo de la cámara (fondo sutil) -->
+  <rect x="6" y="16" width="60" height="44" rx="9" fill="rgba(123,47,190,0.15)" stroke="#7B2FBE" stroke-width="2.8"/>
+  <!-- Lente circular -->
+  <circle cx="36" cy="38" r="13" fill="none" stroke="#7B2FBE" stroke-width="2.5"/>
+  <circle cx="36" cy="38" r="7" fill="#7B2FBE" opacity="0.45"/>
+  <circle cx="36" cy="38" r="3" fill="#7B2FBE"/>
+  <!-- Visor / bump superior derecho -->
+  <rect x="53" y="19" width="13" height="9" rx="3" fill="#7B2FBE" opacity="0.7"/>
+  <!-- Punto rojo de grabación -->
+  <circle cx="61" cy="23" r="3" fill="#ff4d4d"/>
+
+  <!-- Ondas de señal (naranja) — representa audio/voz -->
+  <path d="M74 26 Q90 26 90 38 Q90 50 74 50" stroke="#E8650A" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <path d="M74 31 Q86 31 86 38 Q86 45 74 45" stroke="#E8650A" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <circle cx="74" cy="38" r="3" fill="#E8650A"/>
+
+  <!-- Líneas de transcripción (teal) — debajo de la cámara -->
+  <!-- Línea completa con puntito de speaker -->
+  <circle cx="12" cy="71" r="3.5" fill="#00BCD4"/>
+  <rect x="20"  y="68.5" width="50" height="5" rx="2.5" fill="#00BCD4"/>
+
+  <circle cx="12" cy="82" r="3.5" fill="#6C3CE8"/>
+  <rect x="20"  y="79.5" width="38" height="5" rx="2.5" fill="#6C3CE8" opacity="0.75"/>
+
+  <circle cx="12" cy="93" r="3.5" fill="#E8650A" opacity="0.8"/>
+  <rect x="20"  y="90.5" width="45" height="5" rx="2.5" fill="#E8650A" opacity="0.6"/>
+
+  <!-- ========== TEXTO ========== -->
+  <text x="108" y="56" font-family="Poppins, Arial Black, sans-serif" font-size="41" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#FFFFFF">NexMeet</tspan><tspan fill="#7B2FBE"> AI</tspan>
+  </text>
+  <text x="110" y="76" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.8">Designed by Nexgen Cloudware</text>
+</svg>

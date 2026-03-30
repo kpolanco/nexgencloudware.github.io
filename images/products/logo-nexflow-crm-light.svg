@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" fill="none">
+  <!-- ===== NETWORK ICON ===== -->
+  <line x1="32" y1="28" x2="54" y2="55" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="54" y1="55" x2="32" y2="82" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="54" y1="55" x2="88" y2="55" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="88" y1="55" x2="68" y2="25" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="68" y1="25" x2="32" y2="28" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3" opacity="0.5"/>
+
+  <circle cx="32" cy="28" r="11" fill="#E8650A"/>
+  <circle cx="32" cy="28" r="7" fill="#FF8C42"/>
+  <circle cx="68" cy="25" r="10" fill="none" stroke="#E8650A" stroke-width="2.8"/>
+  <circle cx="68" cy="25" r="4" fill="#E8650A"/>
+  <circle cx="54" cy="55" r="14" fill="none" stroke="#00BCD4" stroke-width="3"/>
+  <circle cx="54" cy="55" r="7" fill="#00BCD4"/>
+  <circle cx="88" cy="55" r="11" fill="#00BCD4"/>
+  <circle cx="88" cy="55" r="5.5" fill="#fff" opacity="0.4"/>
+  <circle cx="32" cy="82" r="11" fill="#7B2FBE"/>
+  <circle cx="32" cy="82" r="5" fill="#a855f7" opacity="0.8"/>
+
+  <!-- ===== TEXT ===== -->
+  <text x="116" y="62" font-family="Poppins, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="-1">
+    <tspan fill="#22038C">NexFlow</tspan><tspan fill="#00BCD4">CRM</tspan>
+  </text>
+  <text x="118" y="82" font-family="Poppins, Arial, sans-serif" font-size="13" font-weight="400" fill="#939598" letter-spacing="0.5">Designed by Nexgen Cloudware</text>
+</svg>

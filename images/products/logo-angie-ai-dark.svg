@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 115" fill="none">
+  <!-- ========== BURBUJA DE CHAT ========== -->
+  <!-- Sombra/glow exterior -->
+  <ellipse cx="52" cy="47" rx="46" ry="44" fill="rgba(0,188,212,0.07)"/>
+  <!-- Borde exterior con gradiente simulado (teal a morado) -->
+  <ellipse cx="52" cy="47" rx="46" ry="44" fill="none" stroke="#00BCD4" stroke-width="3.5"/>
+  <!-- Cola de la burbuja -->
+  <path d="M30 87 L20 104 L46 92" fill="#001a22" stroke="#00BCD4" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Interior blanco/oscuro suave -->
+  <ellipse cx="52" cy="47" rx="39" ry="37" fill="#ffffff" opacity="0.06"/>
+
+  <!-- ========== CEREBRO / PERSONAJE KAWAII ========== -->
+  <!-- Cuerpo del cerebro (blob rosa) -->
+  <ellipse cx="52" cy="49" rx="24" ry="22" fill="#F4C4BE"/>
+  <!-- Textura cerebral (surcos en la parte superior) -->
+  <path d="M33 43 Q38 34 46 38 Q52 31 58 38 Q66 34 71 43" stroke="#e0a09a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Surco inferior -->
+  <path d="M34 50 Q40 57 49 53 Q52 59 55 53 Q64 57 70 50" stroke="#e0a09a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Ojos -->
+  <ellipse cx="44" cy="48" rx="5" ry="5.5" fill="white"/>
+  <ellipse cx="60" cy="48" rx="5" ry="5.5" fill="white"/>
+  <!-- Pupilas azul-verdoso -->
+  <circle cx="45" cy="48" r="3" fill="#5DB8E8"/>
+  <circle cx="61" cy="48" r="3" fill="#5DB8E8"/>
+  <!-- Brillos en ojos -->
+  <circle cx="46.5" cy="46.5" r="1.2" fill="white"/>
+  <circle cx="62.5" cy="46.5" r="1.2" fill="white"/>
+
+  <!-- Mejillas rosadas -->
+  <ellipse cx="39" cy="55" rx="4.5" ry="3" fill="#FFB3C6" opacity="0.65"/>
+  <ellipse cx="65" cy="55" rx="4.5" ry="3" fill="#FFB3C6" opacity="0.65"/>
+
+  <!-- Boca / sonrisa -->
+  <path d="M46 58 Q52 64 58 58" stroke="#d4857e" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Brazo izquierdo (pulgar arriba) -->
+  <path d="M31 55 Q24 51 26 44" stroke="#F4C4BE" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="26" cy="43" r="4" fill="#F4C4BE"/>
+  <!-- Brazo derecho -->
+  <path d="M73 55 Q80 51 78 44" stroke="#F4C4BE" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="78" cy="43" r="4" fill="#F4C4BE"/>
+
+  <!-- ========== AURICULARES ========== -->
+  <!-- Arco superior -->
+  <path d="M30 46 Q30 24 52 24 Q74 24 74 46" stroke="#7B2FBE" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+  <!-- Copa izquierda -->
+  <rect x="24" y="43" width="11" height="15" rx="5.5" fill="#7B2FBE"/>
+  <!-- Copa derecha -->
+  <rect x="69" y="43" width="11" height="15" rx="5.5" fill="#7B2FBE"/>
+  <!-- Almohadillas de las copas -->
+  <rect x="26" y="45" width="7" height="11" rx="3.5" fill="#9c55e0" opacity="0.6"/>
+  <rect x="71" y="45" width="7" height="11" rx="3.5" fill="#9c55e0" opacity="0.6"/>
+  <!-- Brazo del micrófono -->
+  <path d="M69 54 Q63 66 57 67" stroke="#888" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cabeza del micrófono -->
+  <ellipse cx="56" cy="68" rx="4" ry="4" fill="#7B2FBE"/>
+  <ellipse cx="56" cy="68" rx="2" ry="2" fill="#b07eff"/>
+
+  <!-- ========== TEXTO ========== -->
+  <text x="112" y="56" font-family="Poppins, Arial Black, sans-serif" font-size="50" font-weight="800" letter-spacing="-1" fill="#FFFFFF">Angie</text>
+  <!-- Badge AI -->
+  <rect x="113" y="62" width="34" height="19" rx="9.5" fill="url(#angieGrad)"/>
+  <text x="119" y="75.5" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="800" fill="white" letter-spacing="1.5">AI</text>
+  <!-- Subtítulo -->
+  <text x="113" y="97" font-family="Poppins, Arial, sans-serif" font-size="11.5" font-weight="400" fill="rgba(255,255,255,0.4)" letter-spacing="0.5">Designed by Nexgen Cloudware</text>
+
+  <defs>
+    <linearGradient id="angieGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#7B2FBE"/>
+    </linearGradient>
+  </defs>
+</svg>

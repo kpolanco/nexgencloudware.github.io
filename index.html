@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexGen Cloudware | Soluciones de Transformación Digital</title>
-    <meta name="description" content="NexGen Cloudware impulsa la transformación digital con soluciones de IA, automatización, nube y desarrollo de software. Expertos en TI para su éxito empresarial.">
+    <title>NexGen Cloudware | Soluciones de Transformación Digital e Inteligencia Artificial</title>
+    <meta name="description" content="NexGen Cloudware impulsa la transformación digital con soluciones de IA, automatización, nube y desarrollo de software. Descubre NexFlow CRM, NexMeet AI y Angie AI.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
     <link rel="icon" href="images/logo-nexgen-cloudware-vertical.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="sticky-header">
@@ -25,6 +26,7 @@
                 </button>
                 <ul class="nav-list">
                     <li><a href="#acerca-de-nosotros">Quiénes Somos</a></li>
+                    <li><a href="#nuestros-productos">Productos</a></li>
                     <li><a href="#nuestros-servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="faq.html">Preguntas Frecuentes</a></li>
@@ -34,184 +36,726 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="container">
-                <h1 class="sb-hero__title">Transformación digital</h1>
-                <h2 class="sb-hero__subtitle">En NexGen Cloudware, trabajamos de la mano con nuestros clientes para garantizar su éxito en la era digital.</h2>
-                <p class="sb-hero__paragraph">Impulsamos la transformación digital de las organizaciones, optimizando y modernizando sus operaciones con soluciones innovadoras. Integramos tecnologías avanzadas como inteligencia artificial (IA), automatización de procesos y migración o mantenimiento de infraestructuras en la nube, para ayudar a las empresas a alcanzar un nuevo nivel de eficiencia y competitividad.</p>
+        <!-- Hero Section -->
+        <section class="hero-section hero-redesign">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
             </div>
-			<a href="#nuestros-servicios" class="btn btn-primary">Nuestros Servicios</a>
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <span class="hero-badge">Innovación · IA · Automatización</span>
+                    <h1 class="sb-hero__title">Transformamos tu empresa con <span class="hero-highlight">tecnología inteligente</span></h1>
+                    <p class="sb-hero__subtitle">En NexGen Cloudware diseñamos soluciones digitales a la medida de tu negocio: desde inteligencia artificial hasta automatización de procesos, para que operes con mayor eficiencia y competitividad.</p>
+                    <div class="hero-cta-group">
+                        <a href="#nuestros-productos" class="btn btn-hero-primary">Conoce nuestros productos</a>
+                        <a href="#contacto" class="btn btn-hero-outline">Habla con un experto</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+
+                    <!-- Card 1: KPI / Clientes activos -->
+                    <div class="hero-card-float card-1">
+                        <div class="hc-header">
+                            <div class="hc-icon-wrap hc-blue">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+                                </svg>
+                            </div>
+                            <span class="hc-label">Clientes activos</span>
+                        </div>
+                        <div class="hc-value">248</div>
+                        <div class="hc-trend hc-trend-up">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+                            <span>+12% este mes</span>
+                        </div>
+                        <div class="hc-sparkline">
+                            <svg viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="0,22 13,18 26,20 39,14 52,10 65,7 80,3" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="0,22 13,18 26,20 39,14 52,10 65,7 80,3 80,28 0,28" fill="url(#sparkGrad)" opacity="0.2"/>
+                                <defs>
+                                    <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#00BCD4"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Reunión transcrita (NexMeet) -->
+                    <div class="hero-card-float card-2">
+                        <div class="hc-header">
+                            <div class="hc-icon-wrap hc-purple">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                </svg>
+                            </div>
+                            <span class="hc-label">Reunión — en curso</span>
+                            <span class="hc-live-dot"></span>
+                        </div>
+                        <div class="hc-transcript-lines">
+                            <div class="hc-tline">
+                                <span class="hc-sp hc-sp-a">JR</span>
+                                <div class="hc-tbar" style="width:72%"></div>
+                            </div>
+                            <div class="hc-tline">
+                                <span class="hc-sp hc-sp-b">ML</span>
+                                <div class="hc-tbar" style="width:55%"></div>
+                            </div>
+                            <div class="hc-tline hc-tline-active">
+                                <span class="hc-sp hc-sp-c">CA</span>
+                                <div class="hc-tbar hc-tbar-active" style="width:40%"></div>
+                            </div>
+                        </div>
+                        <div class="hc-tag">✦ Tarea detectada</div>
+                    </div>
+
+                    <!-- Card 3: Automatización de proceso -->
+                    <div class="hero-card-float card-3">
+                        <div class="hc-header">
+                            <div class="hc-icon-wrap hc-orange">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+                                    <path d="M15.54 8.46a5 5 0 010 7.07M8.46 8.46a5 5 0 000 7.07"/>
+                                </svg>
+                            </div>
+                            <span class="hc-label">Flujo automatizado</span>
+                        </div>
+                        <div class="hc-flow">
+                            <div class="hc-step hc-done">
+                                <span class="hc-step-dot"></span>
+                                <span>Lead capturado</span>
+                            </div>
+                            <div class="hc-step-line hc-line-done"></div>
+                            <div class="hc-step hc-done">
+                                <span class="hc-step-dot"></span>
+                                <span>Contrato generado</span>
+                            </div>
+                            <div class="hc-step-line"></div>
+                            <div class="hc-step hc-running">
+                                <span class="hc-step-dot hc-dot-pulse"></span>
+                                <span>Notificación enviada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Angie AI — insight -->
+                    <div class="hero-card-float card-4">
+                        <div class="hc-header">
+                            <div class="hc-icon-wrap hc-teal">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <span class="hc-label">Angie AI · Reporte</span>
+                        </div>
+                        <div class="hc-mini-bars">
+                            <div class="hc-bar-col">
+                                <div class="hc-bar-fill" style="height:45%"></div>
+                                <span class="hc-bar-lbl">Ene</span>
+                            </div>
+                            <div class="hc-bar-col">
+                                <div class="hc-bar-fill" style="height:62%"></div>
+                                <span class="hc-bar-lbl">Feb</span>
+                            </div>
+                            <div class="hc-bar-col">
+                                <div class="hc-bar-fill" style="height:55%"></div>
+                                <span class="hc-bar-lbl">Mar</span>
+                            </div>
+                            <div class="hc-bar-col">
+                                <div class="hc-bar-fill hc-bar-active" style="height:88%"></div>
+                                <span class="hc-bar-lbl">Abr</span>
+                            </div>
+                        </div>
+                        <div class="hc-trend hc-trend-up">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+                            <span>Ingresos +18% vs mes anterior</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
-        <section id="acerca-de-nosotros" class="about-section">
-            <div class="sb-background lazy" data-bg="linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7)), url('https://cdn.b12.io/client_media/iBVilSMR/76fde85c-b65d-11ef-b368-0242ac110002-jpg-hero_image.jpeg')" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7)), url(&quot;https://cdn.b12.io/client_media/iBVilSMR/76fde85c-b65d-11ef-b368-0242ac110002-jpg-hero_image.jpeg&quot;);" data-was-processed="true"></div>
-            <div class="container content-overlay"> <h2>Quiénes Somos</h2>
-                <h3>Somos una empresa de servicios de TI enfocada en la transformación digital</h3>
-                <p>En NexGen Cloudware, somos un equipo de expertos comprometidos con el éxito de su empresa, combinando una sólida experiencia técnica con un profundo conocimiento del negocio. Diseñamos soluciones digitales personalizadas que impulsan la innovación y optimizan las operaciones de su organización, siempre alineadas con sus objetivos estratégicos. Nuestra experiencia en áreas clave como automatización de procesos, migración a la nube e inteligencia artificial nos permite ofrecer soluciones a medida, escalables y seguras, adaptadas a las necesidades específicas de cada cliente.</p>
-                <p>Nos especializamos en el desarrollo de sistemas digitales de vanguardia, brindando consultoría en TI estratégica que permite a las empresas transformar sus operaciones y maximizar su potencial. Además, ofrecemos servicios de SaaS, recuperación de datos y alojamiento web, con un enfoque constante en la calidad, la seguridad y la excelencia operativa. En NexGen Cloudware, nos apasiona ayudar a las organizaciones a navegar en su viaje digital, proporcionando soluciones que no solo resuelven los retos actuales, sino que también preparan a las empresas para el futuro.</p>
-				<a href="#contacto" class="btn btn-primary">Contáctanos</a>
-            </div>
-        </section>
-
-        <section class="mission-vision-values-section">
-			<div class="sb-background lazy"></div>
-			<div class="container">
-				<h2>Nuestro Propósito y Principios</h2>
-				<div class="values-content-wrapper">
-					<div class="values-text-column">
-						<div class="value-item">
-							<h3>Misión</h3>
-							<p>Impulsar el éxito de nuestros clientes mediante la innovación tecnológica, ofreciendo soluciones que optimicen sus operaciones.</p>
-						</div>
-						<div class="value-item">
-							<h3>Visión</h3>
-							<p>Ser la empresa líder en servicios tecnológicos, reconocida por su capacidad de transformar negocios a través de la tecnología avanzada.</p>
-						</div>
-						<div class="value-item">
-							<h3>Valores</h3>
-							<ul>
-								<li>Excelencia</li>
-								<li>Integridad</li>
-								<li>Enfoque en el cliente</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-        <section id="nuestros-servicios" class="services-section">
-            <div class="container">
-                <h2>Nuestros Servicios</h2>
-                <h3>Impulsa tu negocio al siguiente nivel</h3>
-                <p class="section-description">Nuestro equipo especializado combina tecnología de última generación con una sólida experiencia en la industria, asegurando que cada proyecto se ejecute bajo los más altos estándares de calidad, eficiencia y seguridad.</p>
-                <div class="services-grid">
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/cloud.png" alt="Nube">
-						</div>
-                        <h4>Nube</h4>
-                        <p>Descubra el verdadero potencial de la nube con nuestros servicios personalizados, diseñados para transformar la eficiencia y agilidad de su negocio. Realizamos migraciones seguras y optimizamos sus operaciones en la nube para maximizar su impacto empresarial.</p>
-                        <a href="services/cloud.html" class="btn btn-secondary">Leer más</a>
+        <!-- ===== QUIÉNES SOMOS (con stats integrados) ===== -->
+        <section id="acerca-de-nosotros" class="about-section-v2">
+            <div class="about-bg-deco"></div>
+            <div class="container about-grid">
+                <!-- Columna izquierda: texto -->
+                <div class="about-text-col">
+                    <span class="section-label-pill">Quiénes Somos</span>
+                    <h2 class="about-heading">Expertos en <span class="about-highlight">transformación digital</span> a tu lado</h2>
+                    <p class="about-lead">En NexGen Cloudware somos un equipo comprometido con el éxito de tu empresa, combinando experiencia técnica con profundo conocimiento del negocio para diseñar soluciones digitales a la medida.</p>
+                    <p class="about-body">Nos especializamos en automatización de procesos, migración a la nube e inteligencia artificial. Desarrollamos sistemas de vanguardia con consultoría estratégica de TI, siempre enfocados en la calidad, la seguridad y la excelencia operativa. Nuestras soluciones no solo resuelven los retos actuales, sino que preparan tu empresa para el futuro.</p>
+                    <div class="about-tags">
+                        <span class="about-tag">☁️ Nube</span>
+                        <span class="about-tag">🤖 IA</span>
+                        <span class="about-tag">⚙️ Automatización</span>
+                        <span class="about-tag">🔒 Ciberseguridad</span>
+                        <span class="about-tag">📊 Datos</span>
                     </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/ti_consulting.png" alt="Consultoría de TI">
-						</div>
-                        <h4>Consultoría de TI</h4>
-                        <p>Impulsamos la evolución tecnológica de su empresa con estrategias personalizadas que alinean la tecnología con sus objetivos de negocio, garantizando resultados sostenibles y escalables.</p>
-                        <a href="services/it_consulting.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/digital_transformation.png" alt="Transformación Digital">
-						</div>
-                        <h4>Transformación Digital</h4>
-                        <p>Lidere el cambio en su industria con nuestra experiencia en transformación digital. Combinamos tecnología avanzada con estrategias innovadoras para redefinir procesos, mejorar la productividad y abrir nuevas oportunidades de crecimiento.</p>
-                        <a href="services/digital_transformation.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/cybersecurity.png" alt="Ciberseguridad">
-						</div>
-                        <h4>Ciberseguridad</h4>
-                        <p>Proteja su organización frente a amenazas digitales con nuestros servicios integrales de ciberseguridad. Desde la prevención hasta la respuesta a incidentes, brindamos soluciones avanzadas para mantener la continuidad y la confianza en su negocio.</p>
-                        <a href="services/cybersecurity.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/software_factory.png" alt="Fábrica de Software">
-						</div>
-                        <h4>Fábrica de Software</h4>
-                        <p>En NexGen Cloudware, nos especializamos en el desarrollo de soluciones de software a medida que responden a los desafíos y necesidades específicas de cada organización.</p>
-                        <a href="services/software_factory.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/automation.png" alt="Automatización de Procesos">
-						</div>
-                        <h4>Automatización de Procesos</h4>
-                        <p>Optimice sus operaciones con nuestras soluciones de automatización inteligente. Desde flujos de trabajo hasta procesos críticos, reducimos tiempos y costos mientras aumentamos la precisión y eficiencia.</p>
-                        <a href="services/process_automation.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/data_analysis.png" alt="Análisis de Datos">
-						</div>
-                        <h4>Análisis de Datos</h4>
-                        <p>Transforme datos en decisiones estratégicas con nuestras soluciones avanzadas de análisis. Extraemos valor de su información para generar insights que impulsen el crecimiento y la innovación en su empresa.</p>
-                        <a href="services/data_analysis.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/technological_training.png" alt="Capacitación Tecnológica">
-						</div>
-                        <h4>Capacitación Tecnológica</h4>
-                        <p>Mantenga a su equipo a la vanguardia con nuestras capacitaciones especializadas en las últimas tecnologías y herramientas digitales. Aseguramos que su talento interno esté preparado para enfrentar los retos del futuro.</p>
-                        <a href="services/technological_training.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/technical_support.png" alt="Soporte Técnico">
-						</div>
-                        <h4>Soporte Técnico</h4>
-                        <p>Garantice la continuidad operativa de su empresa con nuestro soporte técnico ágil y eficiente. Resolvemos incidencias, mantenemos su infraestructura y aseguramos el máximo rendimiento de sus sistemas.</p>
-                        <a href="services/technical_support.html" class="btn btn-secondary">Leer más</a>
-                    </div>
-
-                    <div class="service-card">
-						<div class="service-image">
-							<img src="images/services/technology_commercialization.png" alt="Comercialización de Tecnologías">
-						</div>
-                        <h4>Comercialización de Tecnologías</h4>
-                        <p>Acceda a las mejores soluciones tecnológicas del mercado con nuestro servicio de comercialización. Seleccionamos, adaptamos e implementamos herramientas y plataformas líderes para satisfacer las necesidades específicas de su negocio.</p>
-                        <a href="services/commercialization_technologies.html" class="btn btn-secondary">Leer más</a>
+                    <a href="#contacto" class="btn btn-about-cta">Contáctanos</a>
+                </div>
+                <!-- Columna derecha: stats -->
+                <div class="about-stats-col">
+                    <div class="about-stats-grid">
+                        <div class="about-stat-card">
+                            <span class="asc-number">10<span class="asc-plus">+</span></span>
+                            <span class="asc-label">Años de experiencia</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <span class="asc-number">3</span>
+                            <span class="asc-label">Productos propios</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <span class="asc-number">100<span class="asc-plus">%</span></span>
+                            <span class="asc-label">Soluciones a la medida</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <span class="asc-number">24/7</span>
+                            <span class="asc-label">Disponibilidad IA</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-		<!-- Contact Section -->
-		<section id="contacto" class="contact-section">
-			<div class="container">
-				<h2>Conéctate con nosotros</h2>
-				<p class="section-description">Impulsa tu transformación digital hoy</p>
-				<div class="contact-content">
-					<div class="contact-form-container">
-						<form id="contact-form">
-							<input type="text" id="name" placeholder="Nombre" required>
-							<input type="email" id="email" placeholder="Correo Electrónico" required>
-							<textarea id="message" placeholder="Mensaje" rows="5" required></textarea>
-							<button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-						</form>
-						<div class="form-success" id="form-success">
-							<p>¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.</p>
-						</div>
-					</div>
-					<div class="contact-info-container">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229931.75711176525!2d-100.31611265!3d25.6866143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bf2b67a693bd%3A0x843d665e5b7e8ff4!2sMonterrey%2C%20N.L.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1697654321" width="100%" height="300" style="border:0; border-radius: 8px; margin-bottom: 20px;" allowfullscreen="" loading="lazy"></iframe>
-						<p>Ciudad Monterrey, Nuevo León, México, C.P. 66024</p>
-                        <p>Correo: <a href="mailto:administracion@nexgencloudware.com">administracion@nexgencloudware.com</a></p>
-                        <p>Teléfono: <a href="tel:+528111666884">+52 811 166 6884</a></p>
-                        <p>Sitio web: <a href="https://www.nexgencloudware.com/" target="_blank">www.nexgencloudware.com</a></p>
-                        <div class="social-media">
-                            <a href="https://www.instagram.com/nexgencloudware" target="_blank"><img src="icons/instagram.png" alt="Instagram NexGen Cloudware"></a>
-                            <a href="https://www.facebook.com/profile.php?id=61574205715481" target="_blank"><img src="icons/facebook.png" alt="Facebook NexGen Cloudware"></a>
-                            <a href="https://www.x.com/nexgencloudware" target="_blank"><img src="icons/x.png" alt="X (Twitter) NexGen Cloudware"></a>
-							<a href="https://www.linkedin.com/in/nexgencloudware" target="_blank"><img src="icons/linkedin.png" alt="Linkedin NexGen Cloudware"></a>
+        <!-- ===== PROPÓSITO Y PRINCIPIOS ===== -->
+        <section class="purpose-section">
+            <div class="purpose-bg"></div>
+            <div class="container">
+                <div class="purpose-header">
+                    <span class="section-label-pill pill-light">Propósito y Principios</span>
+                    <h2 class="purpose-heading">Lo que nos define y <span class="purpose-highlight">nos impulsa</span></h2>
+                </div>
+                <div class="purpose-cards">
+                    <!-- Misión -->
+                    <div class="purpose-card">
+                        <div class="pc-icon-wrap pc-icon-mission">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2.5"/>
+                                <circle cx="16" cy="16" r="5" fill="currentColor"/>
+                                <line x1="16" y1="4" x2="16" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="16" y1="24" x2="16" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="4" y1="16" x2="8" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="24" y1="16" x2="28" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
                         </div>
-					</div>
-				</div>
-			</div>
-		</section>
+                        <h3 class="pc-title">Misión</h3>
+                        <p class="pc-text">Impulsar el éxito de nuestros clientes mediante la innovación tecnológica, ofreciendo soluciones que optimicen sus operaciones y los posicionen a la vanguardia de su industria.</p>
+                    </div>
+                    <!-- Visión -->
+                    <div class="purpose-card pc-featured">
+                        <div class="pc-icon-wrap pc-icon-vision">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M2 16 Q8 6 16 6 Q24 6 30 16 Q24 26 16 26 Q8 26 2 16Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <circle cx="16" cy="16" r="5" fill="currentColor"/>
+                                <circle cx="16" cy="16" r="2" fill="white" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="pc-title">Visión</h3>
+                        <p class="pc-text">Ser la empresa líder en servicios tecnológicos, reconocida por nuestra capacidad de transformar negocios a través de la tecnología avanzada y la inteligencia artificial.</p>
+                    </div>
+                    <!-- Valores -->
+                    <div class="purpose-card">
+                        <div class="pc-icon-wrap pc-icon-values">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 4 L19.5 12.5 L29 13.5 L22 20 L24 29 L16 24.5 L8 29 L10 20 L3 13.5 L12.5 12.5 Z" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="pc-title">Valores</h3>
+                        <div class="pc-values-list">
+                            <div class="pc-value-item">
+                                <span class="pc-value-dot"></span>
+                                <div>
+                                    <strong>Excelencia</strong>
+                                    <span>Estándares de calidad en cada entrega</span>
+                                </div>
+                            </div>
+                            <div class="pc-value-item">
+                                <span class="pc-value-dot"></span>
+                                <div>
+                                    <strong>Integridad</strong>
+                                    <span>Transparencia y honestidad en todo momento</span>
+                                </div>
+                            </div>
+                            <div class="pc-value-item">
+                                <span class="pc-value-dot"></span>
+                                <div>
+                                    <strong>Enfoque en el cliente</strong>
+                                    <span>Tu éxito es nuestra prioridad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTOS PROPIOS ===== -->
+        <section id="nuestros-productos" class="products-section">
+            <div class="products-bg-overlay"></div>
+            <div class="container">
+                <div class="products-header">
+                    <span class="section-badge">Nuestros Productos</span>
+                    <h2>Soluciones desarrolladas por <span class="text-gradient">NexGen Cloudware</span></h2>
+                    <p class="section-description">Productos propios diseñados para digitalizar, automatizar e inteligentizar la operación de tu empresa. Cada solución está construida con tecnología de punta y adaptable a tu industria.</p>
+                </div>
+
+                <!-- NexFlow CRM -->
+                <div class="product-card product-nexflow">
+                    <div class="product-card-inner">
+                        <div class="product-info">
+                            <div class="product-logo-wrap">
+                                <img src="images/products/logo-nexflow-crm-dark.svg" alt="NexFlow CRM" class="product-logo">
+                            </div>
+                            <p class="product-tagline">El núcleo operativo de tu empresa</p>
+                            <p class="product-description">Plataforma integral de gestión de clientes, contratos y operaciones diseñada para centralizar, automatizar y optimizar todos los procesos comerciales de tu organización en un solo ecosistema digital.</p>
+                            <ul class="product-features">
+                                <li><span class="feat-icon">✓</span> Gestión centralizada de clientes y contratos</li>
+                                <li><span class="feat-icon">✓</span> Automatización de citas y agenda de servicios</li>
+                                <li><span class="feat-icon">✓</span> Control de operaciones y sucursales</li>
+                                <li><span class="feat-icon">✓</span> Seguimiento de prospectos y leads</li>
+                                <li><span class="feat-icon">✓</span> Integración con asistentes inteligentes</li>
+                                <li><span class="feat-icon">✓</span> Dashboards y reportes en tiempo real</li>
+                            </ul>
+                            <div class="product-problem">
+                                <span class="problem-label">Resuelve:</span>
+                                <span>Información dispersa · Contratos manuales · Pérdida de clientes · Desorden operativo</span>
+                            </div>
+                            <a href="#contacto" class="btn btn-product btn-nexflow">Solicitar Demo</a>
+                        </div>
+                        <div class="product-visual product-visual-nexflow">
+                            <div class="product-mockup">
+                                <div class="mockup-header">
+                                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                    <span class="mockup-title">NexFlow CRM</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mockup-sidebar">
+                                        <div class="sidebar-item active">Dashboard</div>
+                                        <div class="sidebar-item">Clientes</div>
+                                        <div class="sidebar-item">Contratos</div>
+                                        <div class="sidebar-item">Agenda</div>
+                                        <div class="sidebar-item">Reportes</div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mock-card">
+                                            <div class="mock-num nexflow-color">248</div>
+                                            <div class="mock-lbl">Clientes activos</div>
+                                        </div>
+                                        <div class="mock-card">
+                                            <div class="mock-num nexflow-color">36</div>
+                                            <div class="mock-lbl">Citas hoy</div>
+                                        </div>
+                                        <div class="mock-bar-chart">
+                                            <div class="bar-wrap"><div class="bar b1"></div></div>
+                                            <div class="bar-wrap"><div class="bar b2"></div></div>
+                                            <div class="bar-wrap"><div class="bar b3"></div></div>
+                                            <div class="bar-wrap"><div class="bar b4"></div></div>
+                                            <div class="bar-wrap"><div class="bar b5"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NexMeet AI -->
+                <div class="product-card product-nexmeet product-reverse">
+                    <div class="product-card-inner">
+                        <div class="product-visual product-visual-nexmeet">
+                            <div class="product-mockup nexmeet-mockup">
+                                <div class="mockup-header">
+                                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                    <span class="mockup-title">NexMeet AI · Reunión en curso</span>
+                                </div>
+                                <div class="nexmeet-body">
+                                    <!-- Barra de reunión activa -->
+                                    <div class="nm-meeting-bar">
+                                        <span class="nm-rec-dot"></span>
+                                        <span class="nm-meeting-name">Revisión Q2 — Equipo Comercial</span>
+                                        <span class="nm-time">42:17</span>
+                                    </div>
+                                    <!-- Participantes -->
+                                    <div class="nm-participants">
+                                        <span class="nm-avatar nm-av1">JR</span>
+                                        <span class="nm-avatar nm-av2">ML</span>
+                                        <span class="nm-avatar nm-av3">CA</span>
+                                        <span class="nm-participant-count">+2</span>
+                                    </div>
+                                    <!-- Transcripción en vivo -->
+                                    <div class="nm-transcript-label">Transcripción en tiempo real</div>
+                                    <div class="nm-transcript">
+                                        <div class="nm-line">
+                                            <span class="nm-speaker nm-sp1">JR</span>
+                                            <span class="nm-text">…necesitamos cerrar el contrato antes del viernes.</span>
+                                        </div>
+                                        <div class="nm-line">
+                                            <span class="nm-speaker nm-sp2">ML</span>
+                                            <span class="nm-text">Confirmo, yo me encargo de enviar la propuesta hoy.</span>
+                                        </div>
+                                        <div class="nm-line nm-line-active">
+                                            <span class="nm-speaker nm-sp3">CA</span>
+                                            <span class="nm-text nm-typing">Revisaré los números con finanzas<span class="nm-cursor">|</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Tarea detectada -->
+                                    <div class="nm-task-detected">
+                                        <span class="nm-task-icon">✦</span>
+                                        <span class="nm-task-text"><strong>Tarea detectada:</strong> Enviar propuesta — asignada a ML</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-logo-wrap">
+                                <img src="images/products/logo-nexmeet-ai-dark.svg" alt="NexMeet AI" class="product-logo">
+                            </div>
+                            <p class="product-tagline">Tu reunión transcrita, resumida y con tareas asignadas</p>
+                            <p class="product-description">NexMeet AI se une a tus videollamadas para transcribir cada palabra en tiempo real, generar resúmenes ejecutivos automáticos y detectar compromisos y tareas para asignarlas a los participantes. Nunca más pierdas un acuerdo importante de tus reuniones.</p>
+                            <ul class="product-features">
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Transcripción en tiempo real con identificación de participantes</li>
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Resúmenes ejecutivos generados automáticamente al terminar</li>
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Detección y asignación automática de tareas y compromisos</li>
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Compatible con Zoom, Google Meet, Microsoft Teams y más</li>
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Búsqueda inteligente en el historial de reuniones</li>
+                                <li><span class="feat-icon feat-nexmeet">✓</span> Exportación a correo, Slack, CRM o sistema de gestión</span></li>
+                            </ul>
+                            <div class="product-problem">
+                                <span class="problem-label">Resuelve:</span>
+                                <span>Reuniones sin actas · Acuerdos olvidados · Tareas sin seguimiento · Horas perdidas en minutas manuales</span>
+                            </div>
+                            <a href="#contacto" class="btn btn-product btn-nexmeet">Solicitar Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Angie AI -->
+                <div class="product-card product-angie">
+                    <div class="product-card-inner">
+                        <div class="product-info">
+                            <div class="product-logo-wrap">
+                                <img src="images/products/logo-angie-ai-dark.svg" alt="Angie AI" class="product-logo product-logo-angie">
+                            </div>
+                            <p class="product-tagline">El cerebro analítico de tu operación</p>
+                            <p class="product-description">Asistente inteligente empresarial que analiza datos de múltiples sistemas, genera reportes dinámicos, construye dashboards adaptables y entrega insights estratégicos para que tomes decisiones con información real en tiempo real.</p>
+                            <ul class="product-features">
+                                <li><span class="feat-icon feat-angie">✓</span> Análisis de datos de múltiples sistemas</li>
+                                <li><span class="feat-icon feat-angie">✓</span> Reportes automáticos operativos y financieros</li>
+                                <li><span class="feat-icon feat-angie">✓</span> Dashboards inteligentes y adaptables</li>
+                                <li><span class="feat-icon feat-angie">✓</span> Integración con CRMs, ERPs y APIs</li>
+                                <li><span class="feat-icon feat-angie">✓</span> Preguntas en lenguaje natural sobre tu negocio</li>
+                                <li><span class="feat-icon feat-angie">✓</span> Monitoreo de indicadores en tiempo real</li>
+                            </ul>
+                            <div class="product-problem">
+                                <span class="problem-label">Pregúntale:</span>
+                                <span>"¿Cuántos clientes activos tenemos?" · "¿Cuál es el ingreso por sucursal?" · "¿Qué servicios generan más ingresos?"</span>
+                            </div>
+                            <a href="#contacto" class="btn btn-product btn-angie">Solicitar Demo</a>
+                        </div>
+                        <div class="product-visual product-visual-angie">
+                            <div class="product-mockup angie-mockup">
+                                <div class="mockup-header">
+                                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                    <span class="mockup-title">Angie AI · Dashboard</span>
+                                </div>
+                                <div class="angie-body">
+                                    <div class="angie-question">
+                                        <span class="angie-avatar">🧠</span>
+                                        <div class="angie-q-bubble">¿Cuál es el rendimiento del negocio este mes?</div>
+                                    </div>
+                                    <div class="angie-metrics">
+                                        <div class="angie-metric">
+                                            <div class="metric-value angie-color">+18%</div>
+                                            <div class="metric-label">Ingresos vs mes anterior</div>
+                                        </div>
+                                        <div class="angie-metric">
+                                            <div class="metric-value angie-color">312</div>
+                                            <div class="metric-label">Clientes activos</div>
+                                        </div>
+                                        <div class="angie-metric">
+                                            <div class="metric-value angie-color">94%</div>
+                                            <div class="metric-label">Satisfacción</div>
+                                        </div>
+                                    </div>
+                                    <div class="angie-donut-wrap">
+                                        <div class="angie-donut"></div>
+                                        <div class="angie-donut-legend">
+                                            <div><span class="legend-dot d1"></span> Servicios</div>
+                                            <div><span class="legend-dot d2"></span> Contratos</div>
+                                            <div><span class="legend-dot d3"></span> Productos</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== NUESTROS SERVICIOS ===== -->
+        <section id="nuestros-servicios" class="services-section-v2">
+            <div class="container">
+                <div class="services-header">
+                    <span class="section-label-pill">Nuestros Servicios</span>
+                    <h2 class="services-heading">Soluciones que <span class="services-highlight">impulsan tu negocio</span></h2>
+                    <p class="services-subtext">Combinamos tecnología de última generación con experiencia en la industria para ejecutar cada proyecto bajo los más altos estándares de calidad, eficiencia y seguridad.</p>
+                </div>
+                <div class="services-grid-v2">
+
+                    <a href="services/cloud.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/cloud.png" alt="Nube">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Nube</h4>
+                            <p>Migraciones seguras y optimización de operaciones en la nube para maximizar la eficiencia y agilidad de su negocio.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/it_consulting.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/ti_consulting.png" alt="Consultoría de TI">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Consultoría de TI</h4>
+                            <p>Estrategias personalizadas que alinean la tecnología con sus objetivos de negocio para resultados sostenibles y escalables.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/digital_transformation.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/digital_transformation.png" alt="Transformación Digital">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Transformación Digital</h4>
+                            <p>Redefinimos procesos y abrimos nuevas oportunidades de crecimiento combinando tecnología avanzada con estrategias innovadoras.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/cybersecurity.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/cybersecurity.png" alt="Ciberseguridad">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Ciberseguridad</h4>
+                            <p>Protección integral frente a amenazas digitales, desde la prevención hasta la respuesta a incidentes y continuidad operativa.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/software_factory.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/software_factory.png" alt="Fábrica de Software">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Fábrica de Software</h4>
+                            <p>Desarrollo de soluciones de software a medida que responden a los desafíos y necesidades específicas de cada organización.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/process_automation.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/automation.png" alt="Automatización de Procesos">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Automatización de Procesos</h4>
+                            <p>Reducimos tiempos y costos automatizando flujos de trabajo y procesos críticos con mayor precisión y eficiencia.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/data_analysis.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/data_analysis.png" alt="Análisis de Datos">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Análisis de Datos</h4>
+                            <p>Transformamos datos en decisiones estratégicas, extrayendo insights que impulsan el crecimiento e innovación de su empresa.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/technological_training.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/technological_training.png" alt="Capacitación Tecnológica">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Capacitación Tecnológica</h4>
+                            <p>Mantenga a su equipo a la vanguardia con capacitaciones especializadas en las últimas tecnologías y herramientas digitales.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/technical_support.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/technical_support.png" alt="Soporte Técnico">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Soporte Técnico</h4>
+                            <p>Garantizamos la continuidad operativa con soporte ágil y eficiente, manteniendo su infraestructura al máximo rendimiento.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/commercialization_technologies.html" class="svc-card">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/technology_commercialization.png" alt="Comercialización de Tecnologías">
+                        </div>
+                        <div class="svc-content">
+                            <h4>Comercialización de Tecnologías</h4>
+                            <p>Seleccionamos, adaptamos e implementamos las mejores herramientas tecnológicas del mercado para su negocio.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container cta-banner-inner">
+                <div class="cta-banner-text">
+                    <h2>¿Listo para transformar tu empresa?</h2>
+                    <p>Agenda una consulta gratuita y descubre cómo nuestras soluciones pueden impulsar tu negocio.</p>
+                </div>
+                <a href="#contacto" class="btn btn-cta-banner">Agenda tu consulta gratis</a>
+            </div>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section id="contacto" class="contact-section-v2">
+            <div class="contact-top-deco"></div>
+            <div class="container contact-grid-v2">
+
+                <!-- Columna izquierda: info + mapa -->
+                <div class="contact-info-v2">
+                    <span class="section-label-pill">Contáctanos</span>
+                    <h2 class="contact-heading">Hablemos de tu <span class="contact-highlight">transformación digital</span></h2>
+                    <p class="contact-subtext">Estamos listos para escucharte. Cuéntanos sobre tu negocio y juntos encontraremos la solución tecnológica ideal.</p>
+
+                    <div class="contact-data-cards">
+                        <div class="cdc-item">
+                            <div class="cdc-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="cdc-text">
+                                <span class="cdc-label">Ubicación</span>
+                                <span class="cdc-value">Monterrey, Nuevo León, México</span>
+                            </div>
+                        </div>
+                        <div class="cdc-item">
+                            <div class="cdc-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="cdc-text">
+                                <span class="cdc-label">Correo</span>
+                                <a href="mailto:administracion@nexgencloudware.com" class="cdc-value cdc-link">administracion@nexgencloudware.com</a>
+                            </div>
+                        </div>
+                        <div class="cdc-item">
+                            <div class="cdc-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.5 6.5l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="cdc-text">
+                                <span class="cdc-label">Teléfono</span>
+                                <a href="tel:+528111666884" class="cdc-value cdc-link">+52 811 166 6884</a>
+                            </div>
+                        </div>
+                        <div class="cdc-item">
+                            <div class="cdc-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                                </svg>
+                            </div>
+                            <div class="cdc-text">
+                                <span class="cdc-label">Sitio web</span>
+                                <a href="https://www.nexgencloudware.com/" target="_blank" class="cdc-value cdc-link">www.nexgencloudware.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-v2">
+                        <span class="social-label">Síguenos</span>
+                        <div class="social-icons-v2">
+                            <a href="https://www.instagram.com/nexgencloudware" target="_blank" class="social-btn" aria-label="Instagram">
+                                <img src="icons/instagram.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574205715481" target="_blank" class="social-btn" aria-label="Facebook">
+                                <img src="icons/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.x.com/nexgencloudware" target="_blank" class="social-btn" aria-label="X">
+                                <img src="icons/x.png" alt="X">
+                            </a>
+                            <a href="https://www.linkedin.com/in/nexgencloudware" target="_blank" class="social-btn" aria-label="LinkedIn">
+                                <img src="icons/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-map-wrap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229931.75711176525!2d-100.31611265!3d25.6866143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bf2b67a693bd%3A0x843d665e5b7e8ff4!2sMonterrey%2C%20N.L.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1697654321" width="100%" height="220" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: formulario -->
+                <div class="contact-form-v2">
+                    <div class="form-card">
+                        <h3 class="form-card-title">Envíanos un mensaje</h3>
+                        <p class="form-card-sub">Te respondemos en menos de 24 horas</p>
+                        <form id="contact-form">
+                            <div class="form-field">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" placeholder="correo@empresa.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Teléfono (opcional)</label>
+                                <input type="tel" id="phone" placeholder="+52 81 1234 5678">
+                            </div>
+                            <div class="form-field">
+                                <label for="message">¿En qué podemos ayudarte?</label>
+                                <textarea id="message" placeholder="Cuéntanos sobre tu proyecto o necesidad..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-form-send">
+                                <span>Enviar mensaje</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="form-success" id="form-success">
+                            <div class="success-icon">✓</div>
+                            <p>¡Mensaje enviado con éxito! Nos pondremos en contacto contigo muy pronto.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -221,6 +765,7 @@
             </div>
             <nav class="footer-nav">
                 <ul>
+                    <li><a href="#nuestros-productos">Productos</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
                     <li><a href="index.html#contacto">Contáctanos</a></li>
