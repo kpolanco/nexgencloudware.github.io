@@ -40,86 +40,93 @@
     <main>
 
         <!-- ===== HERO ===== -->
-        <section class="faq-hero-v2">
+        <section class="faq-hero">
             <div class="faq-hero-bg"></div>
+            <div class="faq-hero-grid" aria-hidden="true"></div>
             <div class="container faq-hero-inner">
-                <span class="faq-hero-pill">Centro de ayuda</span>
-                <h1>Preguntas <span class="faq-hero-highlight">Frecuentes</span></h1>
-                <p>Encuentra respuestas claras sobre nuestros servicios, productos y procesos. Si no encuentras lo que buscas, escríbenos.</p>
-
-                <!-- Buscador -->
-                <div class="faq-search-wrap">
-                    <svg class="faq-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                    </svg>
-                    <input type="text" id="faq-search" placeholder="Busca una pregunta…" autocomplete="off">
-                    <span class="faq-search-clear" id="faq-search-clear" title="Limpiar">✕</span>
+                <div class="faq-hero-text">
+                    <h1>Preguntas <span class="faq-highlight">Frecuentes</span></h1>
+                    <p>Encuentra respuestas claras sobre nuestros servicios, productos y procesos. Si no encuentras lo que buscas, nuestro equipo está disponible para ayudarte.</p>
                 </div>
-                <p class="faq-no-results" id="faq-no-results">No se encontraron resultados para tu búsqueda.</p>
+                <!-- Tarjetas de categoría (flotan sobre la sección de contenido) -->
+                <div class="faq-cat-cards">
+                    <button class="faq-cat-card faq-cat-btn active" data-cat="all">
+                        <div class="fcc-icon fcc-icon-all">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Todas</span>
+                            <span class="fcc-count" id="count-all"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="general">
+                        <div class="fcc-icon fcc-icon-general">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">General</span>
+                            <span class="fcc-count" id="count-general"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="servicios">
+                        <div class="fcc-icon fcc-icon-servicios">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Servicios</span>
+                            <span class="fcc-count" id="count-servicios"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="productos">
+                        <div class="fcc-icon fcc-icon-productos">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Productos</span>
+                            <span class="fcc-count" id="count-productos"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <button class="faq-cat-card faq-cat-btn" data-cat="soporte">
+                        <div class="fcc-icon fcc-icon-soporte">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <div class="fcc-body">
+                            <span class="fcc-name">Soporte y Proyectos</span>
+                            <span class="fcc-count" id="count-soporte"></span>
+                        </div>
+                        <svg class="fcc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <!-- ===== CONTENIDO FAQ ===== -->
-        <section class="faq-body">
-            <div class="container faq-layout">
+        <!-- ===== PREGUNTAS ===== -->
+        <section class="faq-content">
+            <div class="container">
 
-                <!-- ---- SIDEBAR: Categorías ---- -->
-                <aside class="faq-sidebar">
-                    <p class="faq-sidebar-title">Categorías</p>
-                    <ul class="faq-cat-list">
-                        <li><button class="faq-cat-btn active" data-cat="all">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                            Todas las preguntas
-                            <span class="faq-cat-count" id="count-all"></span>
-                        </button></li>
-                        <li><button class="faq-cat-btn" data-cat="general">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                            General
-                            <span class="faq-cat-count" id="count-general"></span>
-                        </button></li>
-                        <li><button class="faq-cat-btn" data-cat="servicios">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                            Servicios
-                            <span class="faq-cat-count" id="count-servicios"></span>
-                        </button></li>
-                        <li><button class="faq-cat-btn" data-cat="productos">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-                            Nuestros Productos
-                            <span class="faq-cat-count" id="count-productos"></span>
-                        </button></li>
-                        <li><button class="faq-cat-btn" data-cat="soporte">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                            Soporte y Proyectos
-                            <span class="faq-cat-count" id="count-soporte"></span>
-                        </button></li>
-                    </ul>
-
-                    <!-- CTA sidebar -->
-                    <div class="faq-sidebar-cta">
-                        <div class="faq-cta-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.99 1.17 2 2 0 013 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.15a16 16 0 006.5 6.5l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                        </div>
-                        <p>¿No encontraste tu respuesta?</p>
-                        <a href="index.html#contacto" class="faq-cta-btn">Escríbenos</a>
-                    </div>
-                </aside>
-
-                <!-- ---- LISTA DE PREGUNTAS ---- -->
                 <div class="faq-list" id="faq-list">
 
                     <!-- ======= GENERAL ======= -->
                     <div class="faq-group" data-cat="general">
                         <div class="faq-group-header">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <span class="fgh-icon fgh-general">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            </span>
                             General
                         </div>
 
                         <div class="faq-item-v2" data-cat="general">
                             <button class="faq-question" aria-expanded="false">
                                 <span>¿Qué es NexGen Cloudware?</span>
-                                <span class="faq-chevron">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                                </span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
                             </button>
                             <div class="faq-answer">
                                 <p>NexGen Cloudware es una empresa de servicios de tecnología de la información (TI) con sede en Monterrey, Nuevo León, México. Nos especializamos en impulsar la transformación digital de las organizaciones mediante soluciones innovadoras de inteligencia artificial, automatización de procesos, migración a la nube y desarrollo de software a la medida. Además, contamos con tres productos propios: <strong>NexFlow CRM</strong>, <strong>NexMeet AI</strong> y <strong>Angie AI</strong>.</p>
@@ -137,7 +144,6 @@
                                     <li><strong>Nube:</strong> migración, optimización y administración en Azure, AWS y Google Cloud.</li>
                                     <li><strong>Consultoría de TI:</strong> estrategias tecnológicas alineadas a tus objetivos de negocio.</li>
                                     <li><strong>Transformación Digital:</strong> rediseño de procesos con tecnología avanzada.</li>
-                                    <li><strong>Ciberseguridad:</strong> protección, monitoreo y respuesta ante incidentes.</li>
                                     <li><strong>Fábrica de Software:</strong> desarrollo de sistemas y aplicaciones a la medida.</li>
                                     <li><strong>Automatización de Procesos:</strong> flujos inteligentes que reducen tiempos y costos.</li>
                                     <li><strong>Análisis de Datos:</strong> inteligencia de negocio e insights estratégicos.</li>
@@ -189,7 +195,9 @@
                     <!-- ======= SERVICIOS ======= -->
                     <div class="faq-group" data-cat="servicios">
                         <div class="faq-group-header">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            <span class="fgh-icon fgh-servicios">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </span>
                             Servicios
                         </div>
 
@@ -230,25 +238,6 @@
 
                         <div class="faq-item-v2" data-cat="servicios">
                             <button class="faq-question" aria-expanded="false">
-                                <span>¿Qué incluye el servicio de ciberseguridad?</span>
-                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Nuestro servicio de ciberseguridad cubre desde la prevención hasta la respuesta ante incidentes:</p>
-                                <ul>
-                                    <li>Auditorías y análisis de vulnerabilidades.</li>
-                                    <li>Implementación de políticas y controles de seguridad.</li>
-                                    <li>Monitoreo continuo de amenazas (SOC).</li>
-                                    <li>Protección de endpoints, redes y aplicaciones.</li>
-                                    <li>Gestión de identidades y accesos (IAM).</li>
-                                    <li>Plan de respuesta ante incidentes y recuperación ante desastres.</li>
-                                    <li>Capacitación al personal sobre buenas prácticas de seguridad.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="faq-item-v2" data-cat="servicios">
-                            <button class="faq-question" aria-expanded="false">
                                 <span>¿Desarrollan software completamente a la medida?</span>
                                 <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
                             </button>
@@ -263,7 +252,24 @@
                                 <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
                             </button>
                             <div class="faq-answer">
-                                <p>Sí. Diseñamos programas de capacitación personalizados para equipos de TI y usuarios de negocio. Los temas incluyen herramientas en la nube, ciberseguridad, uso de IA, manejo de datos, y las plataformas específicas que implementamos para tu empresa. Las capacitaciones pueden ser presenciales, en línea o híbridas.</p>
+                                <p>Sí. Diseñamos programas de capacitación personalizados para equipos de TI y usuarios de negocio. Los temas incluyen herramientas en la nube, uso de IA, manejo de datos, y las plataformas específicas que implementamos para tu empresa. Las capacitaciones pueden ser presenciales, en línea o híbridas.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item-v2" data-cat="servicios">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>¿Qué incluye el análisis de datos e inteligencia de negocio?</span>
+                                <span class="faq-chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Nuestro servicio de análisis de datos cubre desde la integración de fuentes hasta la visualización y toma de decisiones:</p>
+                                <ul>
+                                    <li>Integración y centralización de datos de múltiples sistemas.</li>
+                                    <li>Construcción de dashboards e informes con Power BI, Tableau u otras herramientas.</li>
+                                    <li>Modelos predictivos y analítica avanzada con Python y ML.</li>
+                                    <li>Implementación de Data Warehouse o Data Lake según el volumen.</li>
+                                    <li>Capacitación para que tu equipo interprete y actúe sobre los datos.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -271,7 +277,9 @@
                     <!-- ======= PRODUCTOS ======= -->
                     <div class="faq-group" data-cat="productos">
                         <div class="faq-group-header">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                            <span class="fgh-icon fgh-productos">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                            </span>
                             Nuestros Productos
                         </div>
 
@@ -348,7 +356,9 @@
                     <!-- ======= SOPORTE Y PROYECTOS ======= -->
                     <div class="faq-group" data-cat="soporte">
                         <div class="faq-group-header">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            <span class="fgh-icon fgh-soporte">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </span>
                             Soporte y Proyectos
                         </div>
 
@@ -419,7 +429,7 @@
                     </div>
 
                 </div><!-- /faq-list -->
-            </div><!-- /faq-layout -->
+            </div>
         </section>
 
         <!-- ===== CTA FINAL ===== -->

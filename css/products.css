@@ -104,7 +104,7 @@
 }
 
 .hero-highlight {
-    background: linear-gradient(90deg, #00BCD4, #7B2FBE);
+    background: linear-gradient(90deg, #00E5FF 0%, #C084FC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1442,8 +1442,61 @@
 }
 .services-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
+
+/* ---- Tabs de categorías ---- */
+.svc-tabs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.svc-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(34,3,140,0.15);
+    background: transparent;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.83rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+.svc-tab svg { flex-shrink: 0; }
+.svc-tab:hover {
+    border-color: #22038C;
+    color: #22038C;
+    background: rgba(34,3,140,0.05);
+}
+.svc-tab.active {
+    background: #22038C;
+    color: #fff;
+    border-color: #22038C;
+    box-shadow: 0 4px 16px rgba(34,3,140,0.25);
+}
+
+/* ---- Etiqueta de categoría en cada card ---- */
+.svc-cat-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+.svc-cat-infraestructura { background: rgba(0,188,212,0.12); color: #007a8c; }
+.svc-cat-estrategia      { background: rgba(123,47,190,0.12); color: #5a24a0; }
+.svc-cat-desarrollo      { background: rgba(232,101,10,0.12); color: #b5500a; }
+.svc-cat-datos           { background: rgba(16,185,129,0.12); color: #0a7a55; }
 .services-heading {
     color: #0D0B2B;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -1795,12 +1848,15 @@ a.cdc-link:hover { color: #00BCD4; }
     .purpose-cards { grid-template-columns: 1fr; gap: 20px; }
     .contact-grid-v2 { grid-template-columns: 1fr; gap: 48px; }
     .services-grid-v2 { grid-template-columns: repeat(2, 1fr); }
+    .svc-tabs-bar { gap: 6px; }
+    .svc-tab { font-size: 0.78rem; padding: 8px 14px; }
 }
 
 @media (max-width: 768px) {
     .about-section-v2, .purpose-section, .services-section-v2, .contact-section-v2 { padding: 70px 0; }
     .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
     .services-grid-v2 { grid-template-columns: 1fr; }
+    .svc-tab { font-size: 0.75rem; padding: 7px 12px; }
     .form-card { padding: 36px 28px; }
     .purpose-cards { grid-template-columns: 1fr; }
 }

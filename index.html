@@ -195,7 +195,6 @@
                         <span class="about-tag">☁️ Nube</span>
                         <span class="about-tag">🤖 IA</span>
                         <span class="about-tag">⚙️ Automatización</span>
-                        <span class="about-tag">🔒 Ciberseguridad</span>
                         <span class="about-tag">📊 Datos</span>
                     </div>
                     <a href="#contacto" class="btn btn-about-cta">Contáctanos</a>
@@ -509,120 +508,169 @@
                     <h2 class="services-heading">Soluciones que <span class="services-highlight">impulsan tu negocio</span></h2>
                     <p class="services-subtext">Combinamos tecnología de última generación con experiencia en la industria para ejecutar cada proyecto bajo los más altos estándares de calidad, eficiencia y seguridad.</p>
                 </div>
-                <div class="services-grid-v2">
 
-                    <a href="services/cloud.html" class="svc-card">
+                <!-- Tabs de categorías -->
+                <div class="svc-tabs-bar" role="tablist" aria-label="Categorías de servicios">
+                    <button class="svc-tab active" data-filter="all" role="tab" aria-pressed="true">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        Todos
+                    </button>
+                    <button class="svc-tab" data-filter="infraestructura" role="tab" aria-pressed="false">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        Infraestructura
+                    </button>
+                    <button class="svc-tab" data-filter="estrategia" role="tab" aria-pressed="false">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        Estrategia y Consultoría
+                    </button>
+                    <button class="svc-tab" data-filter="desarrollo" role="tab" aria-pressed="false">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        Desarrollo e Innovación
+                    </button>
+                    <button class="svc-tab" data-filter="datos" role="tab" aria-pressed="false">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        Datos y Conocimiento
+                    </button>
+                </div>
+
+                <div class="services-grid-v2" id="svc-grid">
+
+                    <!-- Infraestructura y Seguridad -->
+                    <a href="services/cloud.html" class="svc-card" data-svc-cat="infraestructura">
                         <div class="svc-icon-wrap">
                             <img src="images/services/cloud.png" alt="Nube">
                         </div>
                         <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-infraestructura">Infraestructura</span>
                             <h4>Nube</h4>
                             <p>Migraciones seguras y optimización de operaciones en la nube para maximizar la eficiencia y agilidad de su negocio.</p>
                         </div>
                         <span class="svc-arrow">→</span>
                     </a>
 
-                    <a href="services/it_consulting.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/ti_consulting.png" alt="Consultoría de TI">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Consultoría de TI</h4>
-                            <p>Estrategias personalizadas que alinean la tecnología con sus objetivos de negocio para resultados sostenibles y escalables.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/digital_transformation.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/digital_transformation.png" alt="Transformación Digital">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Transformación Digital</h4>
-                            <p>Redefinimos procesos y abrimos nuevas oportunidades de crecimiento combinando tecnología avanzada con estrategias innovadoras.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/cybersecurity.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/cybersecurity.png" alt="Ciberseguridad">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Ciberseguridad</h4>
-                            <p>Protección integral frente a amenazas digitales, desde la prevención hasta la respuesta a incidentes y continuidad operativa.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/software_factory.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/software_factory.png" alt="Fábrica de Software">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Fábrica de Software</h4>
-                            <p>Desarrollo de soluciones de software a medida que responden a los desafíos y necesidades específicas de cada organización.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/process_automation.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/automation.png" alt="Automatización de Procesos">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Automatización de Procesos</h4>
-                            <p>Reducimos tiempos y costos automatizando flujos de trabajo y procesos críticos con mayor precisión y eficiencia.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/data_analysis.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/data_analysis.png" alt="Análisis de Datos">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Análisis de Datos</h4>
-                            <p>Transformamos datos en decisiones estratégicas, extrayendo insights que impulsan el crecimiento e innovación de su empresa.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/technological_training.html" class="svc-card">
-                        <div class="svc-icon-wrap">
-                            <img src="images/services/technological_training.png" alt="Capacitación Tecnológica">
-                        </div>
-                        <div class="svc-content">
-                            <h4>Capacitación Tecnológica</h4>
-                            <p>Mantenga a su equipo a la vanguardia con capacitaciones especializadas en las últimas tecnologías y herramientas digitales.</p>
-                        </div>
-                        <span class="svc-arrow">→</span>
-                    </a>
-
-                    <a href="services/technical_support.html" class="svc-card">
+                    <a href="services/technical_support.html" class="svc-card" data-svc-cat="infraestructura">
                         <div class="svc-icon-wrap">
                             <img src="images/services/technical_support.png" alt="Soporte Técnico">
                         </div>
                         <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-infraestructura">Infraestructura</span>
                             <h4>Soporte Técnico</h4>
                             <p>Garantizamos la continuidad operativa con soporte ágil y eficiente, manteniendo su infraestructura al máximo rendimiento.</p>
                         </div>
                         <span class="svc-arrow">→</span>
                     </a>
 
-                    <a href="services/commercialization_technologies.html" class="svc-card">
+                    <!-- Estrategia y Consultoría -->
+                    <a href="services/it_consulting.html" class="svc-card" data-svc-cat="estrategia">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/ti_consulting.png" alt="Consultoría de TI">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-estrategia">Estrategia</span>
+                            <h4>Consultoría de TI</h4>
+                            <p>Estrategias personalizadas que alinean la tecnología con sus objetivos de negocio para resultados sostenibles y escalables.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/digital_transformation.html" class="svc-card" data-svc-cat="estrategia">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/digital_transformation.png" alt="Transformación Digital">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-estrategia">Estrategia</span>
+                            <h4>Transformación Digital</h4>
+                            <p>Redefinimos procesos y abrimos nuevas oportunidades de crecimiento combinando tecnología avanzada con estrategias innovadoras.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/commercialization_technologies.html" class="svc-card" data-svc-cat="estrategia">
                         <div class="svc-icon-wrap">
                             <img src="images/services/technology_commercialization.png" alt="Comercialización de Tecnologías">
                         </div>
                         <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-estrategia">Estrategia</span>
                             <h4>Comercialización de Tecnologías</h4>
                             <p>Seleccionamos, adaptamos e implementamos las mejores herramientas tecnológicas del mercado para su negocio.</p>
                         </div>
                         <span class="svc-arrow">→</span>
                     </a>
 
+                    <!-- Desarrollo e Innovación -->
+                    <a href="services/software_factory.html" class="svc-card" data-svc-cat="desarrollo">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/software_factory.png" alt="Fábrica de Software">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-desarrollo">Desarrollo</span>
+                            <h4>Fábrica de Software</h4>
+                            <p>Desarrollo de soluciones de software a medida que responden a los desafíos y necesidades específicas de cada organización.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/process_automation.html" class="svc-card" data-svc-cat="desarrollo">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/automation.png" alt="Automatización de Procesos">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-desarrollo">Desarrollo</span>
+                            <h4>Automatización de Procesos</h4>
+                            <p>Reducimos tiempos y costos automatizando flujos de trabajo y procesos críticos con mayor precisión y eficiencia.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <!-- Datos y Conocimiento -->
+                    <a href="services/data_analysis.html" class="svc-card" data-svc-cat="datos">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/data_analysis.png" alt="Análisis de Datos">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-datos">Datos</span>
+                            <h4>Análisis de Datos</h4>
+                            <p>Transformamos datos en decisiones estratégicas, extrayendo insights que impulsan el crecimiento e innovación de su empresa.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
+                    <a href="services/technological_training.html" class="svc-card" data-svc-cat="datos">
+                        <div class="svc-icon-wrap">
+                            <img src="images/services/technological_training.png" alt="Capacitación Tecnológica">
+                        </div>
+                        <div class="svc-content">
+                            <span class="svc-cat-label svc-cat-datos">Datos</span>
+                            <h4>Capacitación Tecnológica</h4>
+                            <p>Mantenga a su equipo a la vanguardia con capacitaciones especializadas en las últimas tecnologías y herramientas digitales.</p>
+                        </div>
+                        <span class="svc-arrow">→</span>
+                    </a>
+
                 </div>
             </div>
+
+            <script>
+            (function() {
+                var tabs = document.querySelectorAll('.svc-tab');
+                var cards = document.querySelectorAll('#svc-grid .svc-card');
+                tabs.forEach(function(tab) {
+                    tab.addEventListener('click', function() {
+                        tabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-pressed','false'); });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-pressed','true');
+                        var filter = tab.dataset.filter;
+                        cards.forEach(function(card) {
+                            if (filter === 'all' || card.dataset.svcCat === filter) {
+                                card.style.display = '';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            })();
+            </script>
         </section>
 
         <!-- CTA Banner -->
