@@ -6,28 +6,30 @@
     <title>Consultoría de TI — NexGen Cloudware</title>
     <meta name="description" content="Consultoría de tecnología empresarial: diagnóstico TI, roadmap estratégico, selección de tecnologías y gobierno de TI alineado a tus objetivos de negocio.">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
     <link rel="stylesheet" href="../css/services.css">
     <link rel="icon" href="../images/logo-nexgen-cloudware-vertical.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="sticky-header">
-        <div class="container header-content">
-            <div class="logo">
+    <header class="sticky-header ng-header">
+        <div class="ng-header-bg"></div>
+        <div class="container header-content ng-header-inner">
+            <div class="logo ng-logo">
                 <a href="../index.html">
                     <img src="../images/logo-header-nexgen.png" alt="Logotipo NexGen Cloudware">
                 </a>
             </div>
-            <nav class="main-nav">
-                <button class="hamburger-menu" aria-label="Abrir menú de navegación">
+            <nav class="main-nav ng-nav">
+                <button class="hamburger-menu ng-hamburger" aria-label="Abrir menú de navegación">
                     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
                 </button>
-                <ul class="nav-list">
+                <ul class="nav-list ng-nav-list">
                     <li><a href="../index.html#acerca-de-nosotros">Quiénes Somos</a></li>
                     <li><a href="../index.html#nuestros-productos">Productos</a></li>
                     <li><a href="../index.html#nuestros-servicios">Servicios</a></li>
-                    <li><a href="../index.html#contacto">Contacto</a></li>
-                    <li><a href="../faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li class="ng-nav-cta"><a href="../index.html#contacto" class="ng-header-btn">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -223,21 +225,63 @@
 
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="../images/logo-nexgen-cloudware-blanco.png" alt="Logotipo NexGen Cloudware">
+    <footer class="ng-footer">
+        <div class="ng-footer-glow ng-footer-glow-1"></div>
+        <div class="ng-footer-glow ng-footer-glow-2"></div>
+        <div class="container ng-footer-inner">
+            <div class="ngf-brand">
+                <img src="../images/logo-nexgen-cloudware-blanco.png" alt="NexGen Cloudware" class="ngf-logo">
+                <p class="ngf-tagline">Transformación digital e inteligencia artificial para empresas que quieren liderar el futuro.</p>
+                <div class="ngf-social">
+                    <a href="https://www.instagram.com/nexgencloudware" target="_blank" aria-label="Instagram" class="ngf-social-btn"><img src="../icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61574205715481" target="_blank" aria-label="Facebook" class="ngf-social-btn"><img src="../icons/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.x.com/nexgencloudware" target="_blank" aria-label="X" class="ngf-social-btn"><img src="../icons/x.png" alt="X"></a>
+                    <a href="https://www.linkedin.com/in/nexgencloudware" target="_blank" aria-label="LinkedIn" class="ngf-social-btn"><img src="../icons/linkedin.png" alt="LinkedIn"></a>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="../index.html#nuestros-productos">Productos</a></li>
-                    <li><a href="../faq.html">FAQ</a></li>
-                    <li><a href="../politica-privacidad.html">Política de Privacidad</a></li>
-                    <li><a href="../index.html#contacto">Contáctanos</a></li>
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Productos</h4>
+                <ul class="ngf-links">
+                    <li><a href="../index.html#nuestros-productos">NexFlow CRM</a></li>
+                    <li><a href="../index.html#nuestros-productos">NexMeet AI</a></li>
+                    <li><a href="../index.html#nuestros-productos">Angie AI</a></li>
                 </ul>
-            </nav>
-            <div class="footer-copyright">
-                <p>&copy; 2025 NexGen Cloudware. Todos los derechos reservados.</p>
+            </div>
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Empresa</h4>
+                <ul class="ngf-links">
+                    <li><a href="../index.html#acerca-de-nosotros">Quiénes Somos</a></li>
+                    <li><a href="../index.html#nuestros-servicios">Servicios</a></li>
+                    <li><a href="../faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../politica-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="ngf-col">
+                <h4 class="ngf-col-title">Contacto</h4>
+                <ul class="ngf-links ngf-contact-list">
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Monterrey, NL, México
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:administracion@nexgencloudware.com">administracion@nexgencloudware.com</a>
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.5 6.5l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <a href="tel:+528111666884">+52 811 166 6884</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ng-footer-bar">
+            <div class="container ng-footer-bar-inner">
+                <p class="ngf-copy">&copy; 2025 NexGen Cloudware. Todos los derechos reservados.</p>
+                <div class="ngf-badges">
+                    <span class="ngf-badge">☁️ Cloud</span>
+                    <span class="ngf-badge">🤖 IA</span>
+                    <span class="ngf-badge">🔒 Seguridad</span>
+                </div>
             </div>
         </div>
     </footer>
