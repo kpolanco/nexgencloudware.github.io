@@ -331,30 +331,23 @@
 .eco-sat-1 {
     top: 8%;
     left: 5%;
-    animation: floatSat 5s ease-in-out infinite;
-    animation-delay: 0s;
 }
 /* sat-2: NexMeet AI — superior derecha (~77%, 23%) */
 .eco-sat-2 {
     top: 8%;
     right: 5%;
-    animation: floatSat 5s ease-in-out infinite;
-    animation-delay: 1.5s;
 }
 /* sat-3: Angie AI — inferior centro */
 .eco-sat-3 {
     bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
-    animation: floatSat 5s ease-in-out infinite;
-    animation-delay: 3s;
 }
 .eco-sat-3:hover { transform: translateX(-50%) scale(1.03); }
 @keyframes floatSat {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-8px); }
 }
-.eco-sat-3 { animation-name: floatSatCenter; }
 @keyframes floatSatCenter {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50%       { transform: translateX(-50%) translateY(-8px); }
@@ -373,12 +366,11 @@
     white-space: nowrap;
     backdrop-filter: blur(6px);
     letter-spacing: 0.3px;
-    animation: floatChip 7s ease-in-out infinite;
 }
-.eco-chip-1 { top: 42%;  left: 2%;  animation-delay: 0.5s; }
-.eco-chip-2 { top: 58%;  right: 0%; animation-delay: 2s;   }
-.eco-chip-3 { top: 32%;  left: 58%; animation-delay: 3.5s; }
-.eco-chip-4 { bottom: 18%; left: 12%; animation-delay: 1s; }
+.eco-chip-1 { top: 42%;  left: 2%;  }
+.eco-chip-2 { top: 58%;  right: 0%; }
+.eco-chip-3 { top: 32%;  left: 58%; }
+.eco-chip-4 { bottom: 18%; left: 12%; }
 @keyframes floatChip {
     0%, 100% { transform: translateY(0);    opacity: 0.55; }
     50%       { transform: translateY(-6px); opacity: 0.8;  }
@@ -1148,6 +1140,127 @@
     transform: translateY(-3px);
     box-shadow: 0 14px 40px rgba(0,0,0,0.3);
     background: #f0f0ff;
+}
+
+/* =====================================================
+   HERO — ANIMACIONES DE ENTRADA (page load)
+   ===================================================== */
+
+/* Keyframes base */
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeLeft {
+    from { opacity: 0; transform: translateX(48px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes heroScaleIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+    to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes heroSatIn1 {
+    from { opacity: 0; transform: translate(-20px, -20px) scale(0.7); }
+    to   { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@keyframes heroSatIn2 {
+    from { opacity: 0; transform: translate(20px, -20px) scale(0.7); }
+    to   { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@keyframes heroSatIn3 {
+    from { opacity: 0; transform: translateX(-50%) translateY(24px) scale(0.7); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+@keyframes heroChipIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.85); }
+    to   { opacity: 0.55; transform: translateY(0) scale(1); }
+}
+@keyframes heroLinesIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Columna de texto — stagger escalonado */
+.hero-ng-eyebrow {
+    opacity: 0;
+    animation: heroFadeDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+}
+.hero-ng-title {
+    opacity: 0;
+    animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+.hero-ng-subtitle {
+    opacity: 0;
+    animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+}
+.hero-ng-stats {
+    opacity: 0;
+    animation: heroFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+.hero-cta-group {
+    opacity: 0;
+    animation: heroFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+}
+
+/* Ecosistema — columna derecha aparece desde la derecha */
+.hero-ng-ecosystem {
+    opacity: 0;
+    animation: heroFadeLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+/* Líneas SVG */
+.eco-lines {
+    opacity: 0;
+    animation: heroLinesIn 0.6s ease-out 1.1s forwards;
+}
+
+/* Nodo central — escala desde el centro */
+.eco-center {
+    opacity: 0;
+    animation: heroScaleIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 1.0s forwards;
+}
+
+/* Satélites — cada uno con delay y dirección propia */
+.eco-sat-1 {
+    opacity: 0;
+    animation:
+        heroSatIn1 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.25s forwards,
+        floatSat 5s ease-in-out 1.8s infinite;
+}
+.eco-sat-2 {
+    opacity: 0;
+    animation:
+        heroSatIn2 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.4s forwards,
+        floatSat 5s ease-in-out 1.95s infinite;
+}
+.eco-sat-3 {
+    opacity: 0;
+    animation:
+        heroSatIn3 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.55s forwards,
+        floatSatCenter 5s ease-in-out 2.1s infinite;
+}
+
+/* Chips — aparecen escalonados y luego flotan */
+.eco-chip-1 { opacity: 0; animation: heroChipIn 0.5s ease-out 1.6s  forwards, floatChip 7s ease-in-out 2.1s  infinite; }
+.eco-chip-2 { opacity: 0; animation: heroChipIn 0.5s ease-out 1.75s forwards, floatChip 7s ease-in-out 2.25s infinite; }
+.eco-chip-3 { opacity: 0; animation: heroChipIn 0.5s ease-out 1.9s  forwards, floatChip 7s ease-in-out 2.4s  infinite; }
+.eco-chip-4 { opacity: 0; animation: heroChipIn 0.5s ease-out 2.05s forwards, floatChip 7s ease-in-out 2.55s infinite; }
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .hero-ng-eyebrow, .hero-ng-title, .hero-ng-subtitle,
+    .hero-ng-stats, .hero-cta-group, .hero-ng-ecosystem,
+    .eco-lines, .eco-center, .eco-sat-1, .eco-sat-2, .eco-sat-3,
+    .eco-chip-1, .eco-chip-2, .eco-chip-3, .eco-chip-4 {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+    .eco-sat-3 { transform: translateX(-50%) !important; }
 }
 
 /* =====================================================
@@ -2228,4 +2341,67 @@ a.cdc-link:hover { color: #00BCD4; }
 @media (max-width: 480px) {
     .ngf-badges { display: none; }
     .ng-footer { padding: 60px 0 0; }
+}
+
+/* =====================================================
+   SCROLL ANIMATIONS — Animaciones de entrada por sección
+   Activadas via IntersectionObserver (clase .is-visible)
+   ===================================================== */
+
+/* --- Keyframes de scroll --- */
+@keyframes scrollFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollFadeLeft {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scrollFadeRight {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scrollScaleUp {
+    from { opacity: 0; transform: scale(0.88); }
+    to   { opacity: 1; transform: scale(1); }
+}
+@keyframes scrollFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* --- Estado inicial: invisible antes de la animación --- */
+.sa-fade-up,
+.sa-fade-left,
+.sa-fade-right,
+.sa-scale,
+.sa-fade {
+    opacity: 0;
+}
+
+/* --- Estado visible: aplica la animación correcta --- */
+.sa-fade-up.is-visible    { animation: scrollFadeUp   0.7s cubic-bezier(0.22,1,0.36,1) both; }
+.sa-fade-left.is-visible  { animation: scrollFadeLeft 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+.sa-fade-right.is-visible { animation: scrollFadeRight 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+.sa-scale.is-visible      { animation: scrollScaleUp  0.65s cubic-bezier(0.34,1.56,0.64,1) both; }
+.sa-fade.is-visible       { animation: scrollFadeIn   0.6s ease-out both; }
+
+/* --- Delays escalonados para grupos de elementos --- */
+.sa-d1  { animation-delay: 0.05s !important; }
+.sa-d2  { animation-delay: 0.15s !important; }
+.sa-d3  { animation-delay: 0.25s !important; }
+.sa-d4  { animation-delay: 0.35s !important; }
+.sa-d5  { animation-delay: 0.45s !important; }
+.sa-d6  { animation-delay: 0.55s !important; }
+.sa-d7  { animation-delay: 0.65s !important; }
+.sa-d8  { animation-delay: 0.75s !important; }
+.sa-d9  { animation-delay: 0.85s !important; }
+
+/* --- Accesibilidad: sin movimiento si el usuario lo prefiere --- */
+@media (prefers-reduced-motion: reduce) {
+    .sa-fade-up, .sa-fade-left, .sa-fade-right, .sa-scale, .sa-fade {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+    }
 }
